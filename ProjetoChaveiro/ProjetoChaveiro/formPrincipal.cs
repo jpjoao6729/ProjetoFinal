@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace ProjetoChaveiro
 {
-    public partial class formPrincipal : Form
+    public partial class frmPrincipal : Form
     {
-        public formPrincipal()
+        public frmPrincipal()
         {
             InitializeComponent();
+        }
+
+        private void saierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
