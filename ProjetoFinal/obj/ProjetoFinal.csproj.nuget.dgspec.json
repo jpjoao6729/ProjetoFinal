@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JOÃO PAULO\\Desktop\\ProjetoFinal\\ProjetoFinal\\ProjetoFinal\\ProjetoFinal.csproj": {}
+    "C:\\Users\\Home\\Desktop\\joaoPaulo\\ProjetoFinal\\ProjetoFinal\\ProjetoFinal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JOÃO PAULO\\Desktop\\ProjetoFinal\\ProjetoFinal\\ProjetoFinal\\ProjetoFinal.csproj": {
+    "C:\\Users\\Home\\Desktop\\joaoPaulo\\ProjetoFinal\\ProjetoFinal\\ProjetoFinal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JOÃO PAULO\\Desktop\\ProjetoFinal\\ProjetoFinal\\ProjetoFinal\\ProjetoFinal.csproj",
+        "projectUniqueName": "C:\\Users\\Home\\Desktop\\joaoPaulo\\ProjetoFinal\\ProjetoFinal\\ProjetoFinal.csproj",
         "projectName": "ProjetoFinal",
-        "projectPath": "C:\\Users\\JOÃO PAULO\\Desktop\\ProjetoFinal\\ProjetoFinal\\ProjetoFinal\\ProjetoFinal.csproj",
-        "packagesPath": "C:\\Users\\JOÃO PAULO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JOÃO PAULO\\Desktop\\ProjetoFinal\\ProjetoFinal\\ProjetoFinal\\obj\\",
+        "projectPath": "C:\\Users\\Home\\Desktop\\joaoPaulo\\ProjetoFinal\\ProjetoFinal\\ProjetoFinal.csproj",
+        "packagesPath": "C:\\Users\\Home\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Home\\Desktop\\joaoPaulo\\ProjetoFinal\\ProjetoFinal\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\JOÃO PAULO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Home\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
