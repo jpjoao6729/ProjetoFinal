@@ -1,0 +1,12 @@
+C:\Users\Home\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\bin\Debug\ProjetoChaveiro.exe.config
+C:\Users\Home\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\bin\Debug\ProjetoChaveiro.exe
+C:\Users\Home\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\bin\Debug\ProjetoChaveiro.pdb
+C:\Users\Home\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmPrincipal.resources
+C:\Users\Home\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmBase.resources
+C:\Users\Home\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.Properties.Resources.resources
+C:\Users\Home\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.csproj.GenerateResource.cache
+C:\Users\Home\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.exe
+C:\Users\Home\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.pdb
+C:\Users\Home\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmCadastroCliente.resources
+C:\Users\Home\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmCadastroDeFuncioanio.resources
+C:\Users\Home\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmCadastroProdutos.resources
