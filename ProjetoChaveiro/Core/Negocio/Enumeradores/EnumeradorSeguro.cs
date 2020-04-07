@@ -20,10 +20,10 @@ namespace Core.Negocio.Enumeradores
             return tipo.GetFields(BindingFlags.Static | BindingFlags.Public).Select(campo => (Enumerador)campo.GetValue(null)).ToList();
         }
 
-        public static Enumerador Obtenha<Enumerador>(int codigo)
+        public static Enumerador Obtenha<Enumerador>(int codigo) where Enumerador : EnumeradorSeguro<T>
         {
             var propriedades = ObtenhaTodos<Enumerador>();
-            return propriedades.Where(x => x.)
+            return propriedades.Where(x => x.Codigo.Equals(codigo)).FirstOrDefault();
         }
 
     }

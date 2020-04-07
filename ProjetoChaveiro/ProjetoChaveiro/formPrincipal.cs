@@ -1,30 +1,38 @@
-﻿using Core.Negocio.Enumeradores;
+﻿using Core.Negocio.Menu;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-//using 
 
 
 namespace ProjetoChaveiro
 {
     public partial class frmPrincipal : Form
     {
+        private MenuAplicacao _menu = new MenuAplicacao();
         public frmPrincipal()
         { 
             InitializeComponent();
-            var enumeradorDeMenu = EnumeradorDeMenu.ObtenhaTodos<EnumeradorDeMenu>();
-            CarregueDicionario();
+            CarregaMenu();
         }
 
-        private void CarregueDicionario()
+        private void CarregaMenu()
         {
-            var dicionarioMenu = new Dictionary<string, string>();
+            var opcoesDomenu = _menu.ObtenhaOpcoes();
+            foreach(var menu in opcoesDomenu)
+            {
+                
+            }
 
         }
 
         private void saierToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void AbraFormulario(object sender, EventArgs e)
+        {
+
         }
     }
 }
