@@ -113,19 +113,19 @@
             // 
             this.cadastraProdutoToolStripMenuItem.Name = "cadastraProdutoToolStripMenuItem";
             this.cadastraProdutoToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.cadastraProdutoToolStripMenuItem.Text = "Cadastra Produto";
+            this.cadastraProdutoToolStripMenuItem.Text = "Cadastro de Produto";
             // 
             // cadastraClienteToolStripMenuItem
             // 
             this.cadastraClienteToolStripMenuItem.Name = "cadastraClienteToolStripMenuItem";
             this.cadastraClienteToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.cadastraClienteToolStripMenuItem.Text = "Cadastra Cliente";
+            this.cadastraClienteToolStripMenuItem.Text = "Cadastro de Clientes";
             // 
             // cadastraFornecedorToolStripMenuItem
             // 
             this.cadastraFornecedorToolStripMenuItem.Name = "cadastraFornecedorToolStripMenuItem";
             this.cadastraFornecedorToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.cadastraFornecedorToolStripMenuItem.Text = "Cadastra Fornecedor";
+            this.cadastraFornecedorToolStripMenuItem.Text = "Cadastro de Fornecedores";
             // 
             // cadastraToolStripMenuItem
             // 
