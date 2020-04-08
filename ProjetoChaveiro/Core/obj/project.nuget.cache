@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SxNjK1/wy0fhadT44CANpU91dbxNJfHqMoyY6VivmnLm1I7ykWRig5DGZeBr4eBr3nDTMH9/UaweUp5A9UiOEg==",
+  "dgSpecHash": "Uk6jABF7Kwwr+zTG/3n7clxfcKQx2fkxLj4OllA7S9rzKp4befNMlA1x+FwSkVtEKFkgbqKnTSW835sloCZxjg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Home\\Desktop\\joaoPaulo\\ProjetoFinal\\ProjetoChaveiro\\Core\\Core.csproj",
+  "projectFilePath": "C:\\Desktop\\joaoPaulo\\ProjetoFinal\\ProjetoChaveiro\\Core\\Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Home\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Home\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

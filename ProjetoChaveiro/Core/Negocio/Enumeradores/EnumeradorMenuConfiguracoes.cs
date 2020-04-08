@@ -6,6 +6,7 @@ namespace Core.Negocio.Enumeradores
 {
     public class EnumeradorMenuConfiguracoes : EnumeradorSeguro<int>
     {
+        private static string NomeFuncao = "Configurações";
         public static EnumeradorMenuConfiguracoes Sistema = new EnumeradorMenuConfiguracoes(1, "Configurações do Sistema");
         public static EnumeradorMenuConfiguracoes CadastroOperadores = new EnumeradorMenuConfiguracoes(2, "Cadastro operadores");
 

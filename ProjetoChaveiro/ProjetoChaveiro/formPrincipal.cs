@@ -12,16 +12,41 @@ namespace ProjetoChaveiro
         public frmPrincipal()
         { 
             InitializeComponent();
+            IsMdiContainer = true;
             CarregaMenu();
         }
 
         private void CarregaMenu()
         {
+
+            //var toolStripContainer1 = new ToolStripMenuItem();
+            //var toolStrip1 = new ToolStripMenuItem();
+            //toolStrip1.DropDownItems.Add("One");
+
+            //toolStripContainer1.DropDownItems.Add(toolStrip1);
+
+
+            //menuStrip1.Items.Add(toolStripContainer1);
+
+
+
             var opcoesDomenu = _menu.ObtenhaOpcoes();
-            foreach(var menu in opcoesDomenu)
+            
+            foreach (var menu in opcoesDomenu)
             {
-                
+                var tsMenu = new ToolStripMenuItem();
+                tsMenu.Text = menu.Key;
+                foreach (var subMenu in menu.Value)
+                {
+                    var tsSubMenu = new ToolStripMenuItem();
+                    tsSubMenu.Text = tsSubMenu.Name;// subMenu.GetValue("");
+                    tsSubMenu.Click += AbraFormulario;
+
+                    tsMenu.DropDownItems.Add(tsSubMenu);
+                }
+                menuStrip1.Items.Add(tsMenu);
             }
+            
 
         }
 

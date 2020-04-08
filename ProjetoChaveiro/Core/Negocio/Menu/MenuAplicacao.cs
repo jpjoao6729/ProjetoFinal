@@ -13,14 +13,15 @@ namespace Core.Negocio.Menu
         public static EnumeradorMenuOrdemServico _menuOrdemDeServico;
         public static EnumeradorMenuConfiguracoes _menuConfiguracoes;
 
-        public Dictionary<Type, FieldInfo[]> ObtenhaOpcoes()
+        public Dictionary<string, FieldInfo[]> ObtenhaOpcoes()
         {
             var propriedades = typeof(MenuAplicacao).GetFields();
-            var dicionario = new Dictionary<Type, FieldInfo[]>();
+            var dicionario = new Dictionary<string, FieldInfo[]>();
             foreach (var propriedade in propriedades)
             {
-                var instancia = propriedade.FieldType.GetFields(BindingFlags.Static | BindingFlags.Public);
-                dicionario.Add(propriedade.FieldType, instancia);
+                var nome = propriedade.FieldType.GetFields(BindingFlags.NonPublic | BindingFlags.Static)[0].GetValue(null);
+                var subMenus = propriedade.FieldType.GetFields(BindingFlags.Static | BindingFlags.Public);
+                dicionario.Add(nome.ToString(), subMenus);
             }
 
             return dicionario;

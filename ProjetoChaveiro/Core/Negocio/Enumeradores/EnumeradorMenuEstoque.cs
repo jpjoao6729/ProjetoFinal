@@ -6,6 +6,7 @@ namespace Core.Negocio.Enumeradores
 {
     public class EnumeradorMenuEstoque : EnumeradorSeguro<int>
     {
+        private static string NomeFuncao = "Estoque";
         public static EnumeradorMenuEstoque EstoqueEntrada = new EnumeradorMenuEstoque(1, "Registra Entrada");
         public static EnumeradorMenuEstoque EmissaoEstoque = new EnumeradorMenuEstoque(2, "Emissao do Estoque");
 

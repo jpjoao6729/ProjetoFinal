@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Home\\Desktop\\joaoPaulo\\ProjetoFinal\\ProjetoChaveiro\\Core\\Core.csproj": {}
+    "C:\\Desktop\\joaoPaulo\\ProjetoFinal\\ProjetoChaveiro\\Core\\Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Home\\Desktop\\joaoPaulo\\ProjetoFinal\\ProjetoChaveiro\\Core\\Core.csproj": {
+    "C:\\Desktop\\joaoPaulo\\ProjetoFinal\\ProjetoChaveiro\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Home\\Desktop\\joaoPaulo\\ProjetoFinal\\ProjetoChaveiro\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Desktop\\joaoPaulo\\ProjetoFinal\\ProjetoChaveiro\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Users\\Home\\Desktop\\joaoPaulo\\ProjetoFinal\\ProjetoChaveiro\\Core\\Core.csproj",
+        "projectPath": "C:\\Desktop\\joaoPaulo\\ProjetoFinal\\ProjetoChaveiro\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\Home\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Home\\Desktop\\joaoPaulo\\ProjetoFinal\\ProjetoChaveiro\\Core\\obj\\",
+        "outputPath": "C:\\Desktop\\joaoPaulo\\ProjetoFinal\\ProjetoChaveiro\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
