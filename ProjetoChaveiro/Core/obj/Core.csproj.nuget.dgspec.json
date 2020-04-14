@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Desktop\\joaoPaulo\\ProjetoFinal\\ProjetoChaveiro\\Core\\Core.csproj": {}
+    "C:\\Joao\\ProjetoFinal\\ProjetoChaveiro\\Core\\Core.csproj": {}
   },
   "projects": {
-    "C:\\Desktop\\joaoPaulo\\ProjetoFinal\\ProjetoChaveiro\\Core\\Core.csproj": {
+    "C:\\Joao\\ProjetoFinal\\ProjetoChaveiro\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Desktop\\joaoPaulo\\ProjetoFinal\\ProjetoChaveiro\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Joao\\ProjetoFinal\\ProjetoChaveiro\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Desktop\\joaoPaulo\\ProjetoFinal\\ProjetoChaveiro\\Core\\Core.csproj",
+        "projectPath": "C:\\Joao\\ProjetoFinal\\ProjetoChaveiro\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\Home\\.nuget\\packages\\",
-        "outputPath": "C:\\Desktop\\joaoPaulo\\ProjetoFinal\\ProjetoChaveiro\\Core\\obj\\",
+        "outputPath": "C:\\Joao\\ProjetoFinal\\ProjetoChaveiro\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
