@@ -25,3 +25,11 @@ C:\Joao\ProjetoFinal\ProjetoChaveiro\Core\obj\Debug\netstandard2.0\Core.Assembly
 C:\Joao\ProjetoFinal\ProjetoChaveiro\Core\obj\Debug\netstandard2.0\Core.AssemblyInfo.cs
 C:\Joao\ProjetoFinal\ProjetoChaveiro\Core\obj\Debug\netstandard2.0\Core.dll
 C:\Joao\ProjetoFinal\ProjetoChaveiro\Core\obj\Debug\netstandard2.0\Core.pdb
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\Core\bin\Debug\netstandard2.0\Core.deps.json
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\Core\bin\Debug\netstandard2.0\Core.dll
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\Core\bin\Debug\netstandard2.0\Core.pdb
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\Core\obj\Debug\netstandard2.0\Core.csprojAssemblyReference.cache
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\Core\obj\Debug\netstandard2.0\Core.AssemblyInfoInputs.cache
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\Core\obj\Debug\netstandard2.0\Core.AssemblyInfo.cs
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\Core\obj\Debug\netstandard2.0\Core.dll
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\Core\obj\Debug\netstandard2.0\Core.pdb

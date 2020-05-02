@@ -45,6 +45,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controles\ctlEmail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ctlEmail.Designer.cs">
+      <DependentUpon>ctlEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ctlEndereco.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ctlEndereco.Designer.cs">
+      <DependentUpon>ctlEndereco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ctlTelefone.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ctlTelefone.Designer.cs">
+      <DependentUpon>ctlTelefone.cs</DependentUpon>
+    </Compile>
     <Compile Include="formPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +95,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controles\ctlEmail.resx">
+      <DependentUpon>ctlEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ctlEndereco.resx">
+      <DependentUpon>ctlEndereco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ctlTelefone.resx">
+      <DependentUpon>ctlTelefone.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formPrincipal.resx">
       <DependentUpon>formPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,5 +154,6 @@
       <Name>Core</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -8,5 +8,10 @@ namespace ProjetoChaveiro
             InitializeComponent();
             base.lblNomeFuncao.Text = "Cadastro de Clientes";
         }
+
+        private void textBox2_TextChanged(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }
