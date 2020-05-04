@@ -9,7 +9,7 @@ namespace Core.Negocio.Enumeradores
         private static string NomeFuncao = "Financeiro";
         public static EnumeradorMenuCaixa Caixa = new EnumeradorMenuCaixa("Caixa", "frmCaixa");
         public static EnumeradorMenuCaixa AberturaCaixa = new EnumeradorMenuCaixa("Abertura Caixa", "frmAberturaDoCaixa");
-        public static EnumeradorMenuCaixa EmissaoCaixa = new EnumeradorMenuCaixa("Relatorios Caixa", "frmRelatorioDoCaixa");
+        public static EnumeradorMenuCaixa EmissaoCaixa = new EnumeradorMenuCaixa("Relatorios Caixa", "frmRelatorioCaixa");
 
 
         public EnumeradorMenuCaixa(string codigo, string descricao) : base(codigo, descricao) { }

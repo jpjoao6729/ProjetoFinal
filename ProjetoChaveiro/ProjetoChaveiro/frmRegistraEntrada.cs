@@ -10,12 +10,13 @@ using System.Windows.Forms;
 
 namespace ProjetoChaveiro
 {
-    public partial class frmBase : Form
+    public partial class frmRegistraEntrada : frmBase
     {
-        public frmBase()
+        public frmRegistraEntrada()
         {
             InitializeComponent();
+            base.lblNomeFuncao.Text = "Entrada Estoque";
+            lblNomeTela.Text = nameof(frmRegistraEntrada);
         }
-
     }
 }

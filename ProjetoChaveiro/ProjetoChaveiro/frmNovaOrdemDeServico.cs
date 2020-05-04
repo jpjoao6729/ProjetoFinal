@@ -10,12 +10,13 @@ using System.Windows.Forms;
 
 namespace ProjetoChaveiro
 {
-    public partial class frmBase : Form
+    public partial class frmNovaOrdemDeServico : frmBase
     {
-        public frmBase()
+        public frmNovaOrdemDeServico()
         {
             InitializeComponent();
+            base.lblNomeFuncao.Text = "Ordem de serviço";
+            lblNomeTela.Text = nameof(frmNovaOrdemDeServico);
         }
-
     }
 }

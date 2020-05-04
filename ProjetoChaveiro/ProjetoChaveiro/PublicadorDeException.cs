@@ -10,12 +10,13 @@ using System.Windows.Forms;
 
 namespace ProjetoChaveiro
 {
-    public partial class frmBase : Form
+    public partial class PublicadorDeException : Form
     {
-        public frmBase()
+        public PublicadorDeException(Exception exception)
         {
             InitializeComponent();
-        }
+            txtDescricao.Text = exception.Message;
 
+        }
     }
 }
