@@ -39,8 +39,21 @@ namespace ProjetoChaveiro
                 foreach (var subMenu in menu.Value)
                 {
                     var tsSubMenu = new ToolStripMenuItem();
-                    tsSubMenu.Text = tsSubMenu.Name;// subMenu.GetValue("");
-                    tsSubMenu.Click += AbraFormulario;
+                    tsSubMenu.Text = subMenu.Codigo;
+                    tsSubMenu.Click += (object sender, EventArgs e) =>
+                    {
+                        // var formulario = Activator.CreateInstance()
+                        try
+                        {
+                            var formulario = FormularioHelper.CrieFormulario(subMenu.Descricao);
+                            formulario.Show();
+                        }
+                        catch(Exception erro)
+                        {
+                            var publicadorDeExceccoes = new PublicadorDeException(erro);
+                            publicadorDeExceccoes.Show();
+                        }
+                    };
 
                     tsMenu.DropDownItems.Add(tsSubMenu);
                 }

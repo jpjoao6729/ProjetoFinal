@@ -10,12 +10,13 @@ using System.Windows.Forms;
 
 namespace ProjetoChaveiro
 {
-    public partial class frmBase : Form
+    public partial class frmCadastroOperador : frmBase
     {
-        public frmBase()
+        public frmCadastroOperador()
         {
             InitializeComponent();
+            base.lblNomeFuncao.Text = "Cadastro de Operadores";
+            lblNomeTela.Text = nameof(frmCadastroOperador);
         }
-
     }
 }

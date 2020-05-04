@@ -10,12 +10,13 @@ using System.Windows.Forms;
 
 namespace ProjetoChaveiro
 {
-    public partial class frmBase : Form
+    public partial class frmAberturaCaixa : frmBase
     {
-        public frmBase()
+        public frmAberturaCaixa()
         {
             InitializeComponent();
+            base.lblNomeFuncao.Text = "Caixa";
+            lblNomeTela.Text = nameof(frmAberturaCaixa);
         }
-
     }
 }

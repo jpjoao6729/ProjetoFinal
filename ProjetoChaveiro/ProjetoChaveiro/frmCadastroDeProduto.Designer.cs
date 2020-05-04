@@ -1,6 +1,6 @@
 ﻿namespace ProjetoChaveiro
 {
-    partial class frmCadastroProdutos
+    partial class frmCadastroDeProduto
     {
         /// <summary>
         /// Required designer variable.

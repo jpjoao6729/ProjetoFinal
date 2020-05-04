@@ -33,9 +33,12 @@
             this.lblNomeFuncao = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblNomeTela = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -45,7 +48,6 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 0;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // imgLogo
             // 
@@ -86,11 +88,31 @@
             this.panel2.Size = new System.Drawing.Size(413, 66);
             this.panel2.TabIndex = 4;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lblNomeTela);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox1.Location = new System.Drawing.Point(0, 300);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(657, 22);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            // 
+            // lblNomeTela
+            // 
+            this.lblNomeTela.AutoSize = true;
+            this.lblNomeTela.Location = new System.Drawing.Point(0, 8);
+            this.lblNomeTela.Name = "lblNomeTela";
+            this.lblNomeTela.Size = new System.Drawing.Size(54, 13);
+            this.lblNomeTela.TabIndex = 0;
+            this.lblNomeTela.Text = "nomeTela";
+            // 
             // frmBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(657, 100);
+            this.ClientSize = new System.Drawing.Size(657, 322);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Name = "frmBase";
@@ -99,6 +121,8 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -111,5 +135,7 @@
         public System.Windows.Forms.Label lblNomeFuncao;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        protected System.Windows.Forms.Label lblNomeTela;
     }
 }

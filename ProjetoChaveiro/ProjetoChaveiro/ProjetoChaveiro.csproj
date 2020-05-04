@@ -76,32 +76,93 @@
     <Compile Include="formPrincipal.Designer.cs">
       <DependentUpon>formPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormularioHelper.cs" />
+    <Compile Include="frmAberturaCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAberturaCaixa.Designer.cs">
+      <DependentUpon>frmAberturaCaixa.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBase.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmBase.Designer.cs">
       <DependentUpon>frmBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCadastroCliente.cs">
+    <Compile Include="frmCadastroDeCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadastroCliente.Designer.cs">
-      <DependentUpon>frmCadastroCliente.cs</DependentUpon>
+    <Compile Include="frmCadastroDeCliente.Designer.cs">
+      <DependentUpon>frmCadastroDeCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCadastroDeFuncioanio.cs">
+    <Compile Include="frmCadastroDeFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadastroDeFuncioanio.Designer.cs">
-      <DependentUpon>frmCadastroDeFuncioanio.cs</DependentUpon>
+    <Compile Include="frmCadastroDeFornecedor.Designer.cs">
+      <DependentUpon>frmCadastroDeFornecedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCadastroProdutos.cs">
+    <Compile Include="frmCadastroDeFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadastroProdutos.Designer.cs">
-      <DependentUpon>frmCadastroProdutos.cs</DependentUpon>
+    <Compile Include="frmCadastroDeFuncionario.Designer.cs">
+      <DependentUpon>frmCadastroDeFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastroDeProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastroDeProduto.Designer.cs">
+      <DependentUpon>frmCadastroDeProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastroOperador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastroOperador.Designer.cs">
+      <DependentUpon>frmCadastroOperador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCaixa.Designer.cs">
+      <DependentUpon>frmCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfiguracoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfiguracoes.Designer.cs">
+      <DependentUpon>frmConfiguracoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmissaoDeEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmissaoDeEstoque.Designer.cs">
+      <DependentUpon>frmEmissaoDeEstoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNovaOrdemDeServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNovaOrdemDeServico.Designer.cs">
+      <DependentUpon>frmNovaOrdemDeServico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistraEntrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistraEntrada.Designer.cs">
+      <DependentUpon>frmRegistraEntrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRelatorioCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelatorioCaixa.Designer.cs">
+      <DependentUpon>frmRelatorioCaixa.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PublicadorDeException.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PublicadorDeException.Designer.cs">
+      <DependentUpon>PublicadorDeException.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Controles\ctlEmail.resx">
       <DependentUpon>ctlEmail.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,14 +178,14 @@
     <EmbeddedResource Include="frmBase.resx">
       <DependentUpon>frmBase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCadastroCliente.resx">
-      <DependentUpon>frmCadastroCliente.cs</DependentUpon>
+    <EmbeddedResource Include="frmCadastroDeCliente.resx">
+      <DependentUpon>frmCadastroDeCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCadastroDeFuncioanio.resx">
-      <DependentUpon>frmCadastroDeFuncioanio.cs</DependentUpon>
+    <EmbeddedResource Include="frmCadastroDeFuncionario.resx">
+      <DependentUpon>frmCadastroDeFuncionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCadastroProdutos.resx">
-      <DependentUpon>frmCadastroProdutos.cs</DependentUpon>
+    <EmbeddedResource Include="frmCadastroDeProduto.resx">
+      <DependentUpon>frmCadastroDeProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -136,6 +197,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="PublicadorDeException.resx">
+      <DependentUpon>PublicadorDeException.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -161,6 +225,11 @@
       <Name>Core</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Erro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Erro1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
