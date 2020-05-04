@@ -180,25 +180,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Home\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\JOÃO PAULO\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Joao\\ProjetoFinal\\ProjetoChaveiro\\Core\\Core.csproj",
+      "projectUniqueName": "C:\\Users\\JOÃO PAULO\\Desktop\\ProjetoFinal\\ProjetoFinal\\ProjetoChaveiro\\Core\\Core.csproj",
       "projectName": "Core",
-      "projectPath": "C:\\Joao\\ProjetoFinal\\ProjetoChaveiro\\Core\\Core.csproj",
-      "packagesPath": "C:\\Users\\Home\\.nuget\\packages\\",
-      "outputPath": "C:\\Joao\\ProjetoFinal\\ProjetoChaveiro\\Core\\obj\\",
+      "projectPath": "C:\\Users\\JOÃO PAULO\\Desktop\\ProjetoFinal\\ProjetoFinal\\ProjetoChaveiro\\Core\\Core.csproj",
+      "packagesPath": "C:\\Users\\JOÃO PAULO\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\JOÃO PAULO\\Desktop\\ProjetoFinal\\ProjetoFinal\\ProjetoChaveiro\\Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Home\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\JOÃO PAULO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
@@ -238,7 +237,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
