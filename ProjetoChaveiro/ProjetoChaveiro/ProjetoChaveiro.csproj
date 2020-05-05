@@ -181,6 +181,9 @@
     <EmbeddedResource Include="frmCadastroDeCliente.resx">
       <DependentUpon>frmCadastroDeCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastroDeFornecedor.resx">
+      <DependentUpon>frmCadastroDeFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCadastroDeFuncionario.resx">
       <DependentUpon>frmCadastroDeFuncionario.cs</DependentUpon>
     </EmbeddedResource>
