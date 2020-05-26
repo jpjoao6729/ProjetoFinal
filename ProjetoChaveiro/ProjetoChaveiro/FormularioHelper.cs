@@ -1,4 +1,4 @@
-﻿using Core.Negocio.Exceptions;
+﻿using Core.Negocio.Exception;
 using System;
 
 namespace ProjetoChaveiro

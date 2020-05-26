@@ -9,7 +9,7 @@ namespace Core.Negocio.Menu
     {
         public static EnumeradorMenuCadastro _menuCadastro;
         public static EnumeradorMenuEstoque _menuEstoque;
-        public static EnumeradorMenuCaixa _menuCaixa;
+        //public static EnumeradorMenuCaixa _menuCaixa;
         public static EnumeradorMenuOrdemServico _menuOrdemDeServico;
         public static EnumeradorMenuConfiguracoes _menuConfiguracoes;
 

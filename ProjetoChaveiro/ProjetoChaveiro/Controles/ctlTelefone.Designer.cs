@@ -42,9 +42,10 @@
             this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Location = new System.Drawing.Point(6, 7);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(243, 66);
+            this.groupBox1.Size = new System.Drawing.Size(256, 71);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -92,7 +93,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
             this.Name = "ctlTelefone";
-            this.Size = new System.Drawing.Size(261, 87);
+            this.Size = new System.Drawing.Size(256, 71);
             this.Load += new System.EventHandler(this.ctlTelefone_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

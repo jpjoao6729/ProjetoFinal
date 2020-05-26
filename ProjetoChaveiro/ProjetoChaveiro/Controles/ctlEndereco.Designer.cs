@@ -50,9 +50,10 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.pnlControl);
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(596, 137);
+            this.groupBox1.Size = new System.Drawing.Size(615, 145);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -71,9 +72,10 @@
             this.pnlControl.Controls.Add(this.lblLogradouro);
             this.pnlControl.Controls.Add(this.maskedTextBox1);
             this.pnlControl.Controls.Add(this.lblCep);
-            this.pnlControl.Location = new System.Drawing.Point(4, 15);
+            this.pnlControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlControl.Location = new System.Drawing.Point(3, 16);
             this.pnlControl.Name = "pnlControl";
-            this.pnlControl.Size = new System.Drawing.Size(585, 119);
+            this.pnlControl.Size = new System.Drawing.Size(609, 126);
             this.pnlControl.TabIndex = 8;
             // 
             // button1

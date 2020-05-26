@@ -15,6 +15,7 @@ namespace ProjetoChaveiro
         public frmBase()
         {
             InitializeComponent();
+            lblNomeTela.Text = this.GetType().Name;
         }
 
     }

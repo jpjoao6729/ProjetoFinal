@@ -18,18 +18,6 @@ namespace ProjetoChaveiro
 
         private void CarregaMenu()
         {
-
-            //var toolStripContainer1 = new ToolStripMenuItem();
-            //var toolStrip1 = new ToolStripMenuItem();
-            //toolStrip1.DropDownItems.Add("One");
-
-            //toolStripContainer1.DropDownItems.Add(toolStrip1);
-
-
-            //menuStrip1.Items.Add(toolStripContainer1);
-
-
-
             var opcoesDomenu = _menu.ObtenhaOpcoes();
             
             foreach (var menu in opcoesDomenu)
@@ -42,7 +30,6 @@ namespace ProjetoChaveiro
                     tsSubMenu.Text = subMenu.Codigo;
                     tsSubMenu.Click += (object sender, EventArgs e) =>
                     {
-                        // var formulario = Activator.CreateInstance()
                         try
                         {
                             var formulario = FormularioHelper.CrieFormulario(subMenu.Descricao);
@@ -60,16 +47,6 @@ namespace ProjetoChaveiro
                 menuStrip1.Items.Add(tsMenu);
             }
             
-
-        }
-
-        private void saierToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void AbraFormulario(object sender, EventArgs e)
-        {
 
         }
     }

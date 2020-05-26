@@ -18,5 +18,10 @@ namespace ProjetoChaveiro
             base.lblNomeFuncao.Text = "Emissao Estoque";
             lblNomeTela.Text = nameof(frmEmissaoDeEstoque);
         }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

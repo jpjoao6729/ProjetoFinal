@@ -8,7 +8,7 @@ namespace Core.Negocio.Enumeradores
     {
         private static string NomeFuncao = "Configurações";
         public static EnumeradorMenuConfiguracoes Sistema = new EnumeradorMenuConfiguracoes("Configurações do Sistema", "frmConfiguracoes");
-        public static EnumeradorMenuConfiguracoes CadastroOperadores = new EnumeradorMenuConfiguracoes("Cadastro operadores", "frmCadastroOperador");
+        public static EnumeradorMenuConfiguracoes CadastroOperadores = new EnumeradorMenuConfiguracoes("Cadastro operadores", "frmPermissoes");
 
         public EnumeradorMenuConfiguracoes(string codigo, string descricao) : base(codigo, descricao) { }
     }
