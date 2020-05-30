@@ -29,13 +29,15 @@
         private void InitializeComponent()
         {
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.mkCpfCnpj = new System.Windows.Forms.MaskedTextBox();
+            this.rbJuridico = new System.Windows.Forms.RadioButton();
+            this.rbFisico = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.lblCpfCnpj = new System.Windows.Forms.Label();
+            this.inpCodigo = new System.Windows.Forms.TextBox();
+            this.inpRazaoSocial = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.inpNome = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.ctlEmail1 = new ProjetoChaveiro.Controles.ctlEmail();
             this.ctlTelefone1 = new ProjetoChaveiro.Controles.ctlTelefone();
@@ -47,13 +49,15 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.mkCpfCnpj);
+            this.groupBox3.Controls.Add(this.rbJuridico);
+            this.groupBox3.Controls.Add(this.rbFisico);
             this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.textBox2);
-            this.groupBox3.Controls.Add(this.textBox3);
+            this.groupBox3.Controls.Add(this.lblCpfCnpj);
+            this.groupBox3.Controls.Add(this.inpCodigo);
+            this.groupBox3.Controls.Add(this.inpRazaoSocial);
             this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.textBox4);
+            this.groupBox3.Controls.Add(this.inpNome);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Location = new System.Drawing.Point(12, 91);
             this.groupBox3.Name = "groupBox3";
@@ -61,12 +65,38 @@
             this.groupBox3.TabIndex = 12;
             this.groupBox3.TabStop = false;
             // 
-            // textBox1
+            // mkCpfCnpj
             // 
-            this.textBox1.Location = new System.Drawing.Point(117, 88);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(208, 20);
-            this.textBox1.TabIndex = 11;
+            this.mkCpfCnpj.Location = new System.Drawing.Point(117, 88);
+            this.mkCpfCnpj.Mask = "000-000-000.00";
+            this.mkCpfCnpj.Name = "mkCpfCnpj";
+            this.mkCpfCnpj.Size = new System.Drawing.Size(162, 20);
+            this.mkCpfCnpj.TabIndex = 14;
+            // 
+            // rbJuridico
+            // 
+            this.rbJuridico.AutoSize = true;
+            this.rbJuridico.Location = new System.Drawing.Point(305, 17);
+            this.rbJuridico.Name = "rbJuridico";
+            this.rbJuridico.Size = new System.Drawing.Size(63, 17);
+            this.rbJuridico.TabIndex = 13;
+            this.rbJuridico.TabStop = true;
+            this.rbJuridico.Text = "Jurídico";
+            this.rbJuridico.UseVisualStyleBackColor = true;
+            this.rbJuridico.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
+            // rbFisico
+            // 
+            this.rbFisico.AutoSize = true;
+            this.rbFisico.Checked = true;
+            this.rbFisico.Location = new System.Drawing.Point(245, 17);
+            this.rbFisico.Name = "rbFisico";
+            this.rbFisico.Size = new System.Drawing.Size(54, 17);
+            this.rbFisico.TabIndex = 12;
+            this.rbFisico.TabStop = true;
+            this.rbFisico.Text = "Físico";
+            this.rbFisico.UseVisualStyleBackColor = true;
+            this.rbFisico.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // label3
             // 
@@ -78,29 +108,30 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Codigo:";
             // 
-            // label2
+            // lblCpfCnpj
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 86);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 17);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "CNPJ:";
+            this.lblCpfCnpj.AutoSize = true;
+            this.lblCpfCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCpfCnpj.Location = new System.Drawing.Point(6, 86);
+            this.lblCpfCnpj.Name = "lblCpfCnpj";
+            this.lblCpfCnpj.Size = new System.Drawing.Size(47, 17);
+            this.lblCpfCnpj.TabIndex = 10;
+            this.lblCpfCnpj.Text = "CNPJ:";
             // 
-            // textBox2
+            // inpCodigo
             // 
-            this.textBox2.Location = new System.Drawing.Point(117, 15);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 6;
+            this.inpCodigo.Enabled = false;
+            this.inpCodigo.Location = new System.Drawing.Point(117, 15);
+            this.inpCodigo.Name = "inpCodigo";
+            this.inpCodigo.Size = new System.Drawing.Size(100, 20);
+            this.inpCodigo.TabIndex = 6;
             // 
-            // textBox3
+            // inpRazaoSocial
             // 
-            this.textBox3.Location = new System.Drawing.Point(117, 64);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(462, 20);
-            this.textBox3.TabIndex = 3;
+            this.inpRazaoSocial.Location = new System.Drawing.Point(117, 64);
+            this.inpRazaoSocial.Name = "inpRazaoSocial";
+            this.inpRazaoSocial.Size = new System.Drawing.Size(462, 20);
+            this.inpRazaoSocial.TabIndex = 3;
             // 
             // label4
             // 
@@ -108,16 +139,16 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(6, 67);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 17);
+            this.label4.Size = new System.Drawing.Size(91, 17);
             this.label4.TabIndex = 2;
-            this.label4.Text = "Nome Fantasia:";
+            this.label4.Text = "Razão Social";
             // 
-            // textBox4
+            // inpNome
             // 
-            this.textBox4.Location = new System.Drawing.Point(117, 40);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(462, 20);
-            this.textBox4.TabIndex = 1;
+            this.inpNome.Location = new System.Drawing.Point(117, 40);
+            this.inpNome.Name = "inpNome";
+            this.inpNome.Size = new System.Drawing.Size(462, 20);
+            this.inpNome.TabIndex = 1;
             // 
             // label5
             // 
@@ -125,9 +156,9 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(6, 43);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 17);
+            this.label5.Size = new System.Drawing.Size(49, 17);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Razão Social:";
+            this.label5.Text = "Nome:";
             // 
             // ctlEmail1
             // 
@@ -158,6 +189,7 @@
             this.btnSalvar.TabIndex = 15;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnCancelar
             // 
@@ -167,6 +199,7 @@
             this.btnCancelar.TabIndex = 16;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // frmCadastroCliente
             // 
@@ -199,18 +232,20 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label lblCpfCnpj;
+        private System.Windows.Forms.TextBox inpCodigo;
+        private System.Windows.Forms.TextBox inpRazaoSocial;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox inpNome;
         private System.Windows.Forms.Label label5;
         private Controles.ctlEmail ctlEmail1;
         private Controles.ctlTelefone ctlTelefone1;
         private Controles.ctlEndereco ctlEndereco1;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.RadioButton rbJuridico;
+        private System.Windows.Forms.RadioButton rbFisico;
+        private System.Windows.Forms.MaskedTextBox mkCpfCnpj;
     }
 }

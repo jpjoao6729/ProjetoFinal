@@ -8,5 +8,15 @@ namespace ProjetoChaveiro.Telascadastros
             InitializeComponent();
             lblNomeFuncao.Text = "Cadastro de Fornecedor";
         }
+
+        private void btnSalvar_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void btnCancelar_Click(object sender, System.EventArgs e)
+        {
+            Close();
+        }
     }
 }

@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.inpDDD = new System.Windows.Forms.MaskedTextBox();
+            this.inpNumero = new System.Windows.Forms.MaskedTextBox();
+            this.rbCelular = new System.Windows.Forms.RadioButton();
+            this.rbFixo = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.inpDDD);
+            this.groupBox1.Controls.Add(this.inpNumero);
+            this.groupBox1.Controls.Add(this.rbCelular);
+            this.groupBox1.Controls.Add(this.rbFixo);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
@@ -49,43 +49,47 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // radioButton2
+            // inpDDD
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(67, 14);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(70, 21);
-            this.radioButton2.TabIndex = 4;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Celular";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.inpDDD.Location = new System.Drawing.Point(14, 38);
+            this.inpDDD.Mask = "(00)";
+            this.inpDDD.Name = "inpDDD";
+            this.inpDDD.Size = new System.Drawing.Size(29, 20);
+            this.inpDDD.TabIndex = 6;
             // 
-            // radioButton1
+            // inpNumero
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(7, 14);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(51, 21);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Fixo";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.inpNumero.Location = new System.Drawing.Point(67, 38);
+            this.inpNumero.Mask = "0000-0000";
+            this.inpNumero.Name = "inpNumero";
+            this.inpNumero.Size = new System.Drawing.Size(93, 20);
+            this.inpNumero.TabIndex = 5;
             // 
-            // textBox2
+            // rbCelular
             // 
-            this.textBox2.Location = new System.Drawing.Point(8, 38);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(46, 20);
-            this.textBox2.TabIndex = 1;
+            this.rbCelular.AutoSize = true;
+            this.rbCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbCelular.Location = new System.Drawing.Point(67, 14);
+            this.rbCelular.Name = "rbCelular";
+            this.rbCelular.Size = new System.Drawing.Size(70, 21);
+            this.rbCelular.TabIndex = 4;
+            this.rbCelular.Text = "Celular";
+            this.rbCelular.UseVisualStyleBackColor = true;
+            this.rbCelular.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged_1);
             // 
-            // textBox1
+            // rbFixo
             // 
-            this.textBox1.Location = new System.Drawing.Point(60, 38);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(177, 20);
-            this.textBox1.TabIndex = 0;
+            this.rbFixo.AutoSize = true;
+            this.rbFixo.Checked = true;
+            this.rbFixo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbFixo.Location = new System.Drawing.Point(7, 14);
+            this.rbFixo.Name = "rbFixo";
+            this.rbFixo.Size = new System.Drawing.Size(51, 21);
+            this.rbFixo.TabIndex = 2;
+            this.rbFixo.TabStop = true;
+            this.rbFixo.Text = "Fixo";
+            this.rbFixo.UseVisualStyleBackColor = true;
+            this.rbFixo.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // ctlTelefone
             // 
@@ -94,7 +98,6 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "ctlTelefone";
             this.Size = new System.Drawing.Size(256, 71);
-            this.Load += new System.EventHandler(this.ctlTelefone_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -104,9 +107,9 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.RadioButton rbCelular;
+        private System.Windows.Forms.RadioButton rbFixo;
+        private System.Windows.Forms.MaskedTextBox inpNumero;
+        private System.Windows.Forms.MaskedTextBox inpDDD;
     }
 }

@@ -118,3 +118,4 @@ C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoCh
 C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmMovimentacoesEstoque.resources
 C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.Telascadastros.frmEntradaEstoque.resources
 C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmPermissoes.resources
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.Controles.ctlUF.resources

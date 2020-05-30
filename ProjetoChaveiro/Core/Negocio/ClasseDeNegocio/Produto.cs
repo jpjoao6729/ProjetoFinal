@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Core.Negocio.ClasseDeNegocio
 {
-    public abstract class ICliente : IObjeto
+    public class Produto : IObjeto
     {
-        public string Nome { get; set; }
-        public Endereco Endereco { get; set; }
-        public Telefone Telefone { get; set; }
-        public Email Email { get; set; }
+        public int Codigo { get; set; }
+        public string Descricao { get; set; }
+        public decimal Valor { get; set; }
+        public decimal PrecoVenda { get; set; }
         public string String()
         {
             throw new NotImplementedException();

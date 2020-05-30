@@ -38,7 +38,6 @@ namespace ProjetoChaveiro
                         catch(Exception erro)
                         {
                             var publicadorDeExceccoes = new PublicadorDeException(erro);
-                            publicadorDeExceccoes.Show();
                         }
                     };
 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Core.Negocio.ClasseDeNegocio;
 
 namespace ProjetoChaveiro.Controles
 {
@@ -15,6 +16,20 @@ namespace ProjetoChaveiro.Controles
         public ctlEmail()
         {
             InitializeComponent();
+        }
+
+        internal bool EhValido()
+        {
+            return true;
+        }
+
+        internal Email ObtenhaEmail()
+        {
+            return new Email()
+            {
+                Texto = inpEmail.Text
+            };
+
         }
     }
 }

@@ -16,7 +16,7 @@ namespace ProjetoChaveiro
         {
             InitializeComponent();
             txtDescricao.Text = exception.Message;
-
+            this.Show();
         }
     }
 }

@@ -84,6 +84,12 @@
     <Compile Include="Controles\ctlTelefone.Designer.cs">
       <DependentUpon>ctlTelefone.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controles\ctlUF.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ctlUF.Designer.cs">
+      <DependentUpon>ctlUF.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controles\DataGridViewFacil.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -275,6 +281,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\ctlTelefone.resx">
       <DependentUpon>ctlTelefone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ctlUF.resx">
+      <DependentUpon>ctlUF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\DataGridViewFacil.resx">
       <DependentUpon>DataGridViewFacil.cs</DependentUpon>

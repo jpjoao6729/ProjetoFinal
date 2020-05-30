@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Core.Negocio.ClasseDeNegocio;
+using Core.Negocio.Enumerador;
 
 namespace ProjetoChaveiro.Controles
 {
@@ -17,13 +19,38 @@ namespace ProjetoChaveiro.Controles
             InitializeComponent();
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-
+            inpNumero.Text = "";
+            inpDDD.Text = "";
+            inpNumero.Mask = "0000-0000";
+                
         }
 
-        private void ctlTelefone_Load(object sender, EventArgs e)
+        private void radioButton2_CheckedChanged_1(object sender, EventArgs e)
         {
+            inpNumero.Text = "";
+            inpDDD.Text = "";
+            inpNumero.Mask = "00000-0000";
+        }
+
+        internal bool EhValido()
+        {
+            if (inpDDD.Text.Contains("_")) return false;
+            if (inpNumero.Text.Contains("_")) return false;
+            if (rbCelular.Checked && inpNumero.Text[0] != '9') return false;
+
+            return true;
+        }
+
+        internal Telefone ObtenhaTelefone()
+        {
+            return new Telefone()
+            {
+                DDD = inpDDD.Text,
+                Numero = inpNumero.Text,
+                Tipo = rbCelular.Checked ? EnumeradorTelefone.Celular : EnumeradorTelefone.Fixo
+            };
 
         }
     }

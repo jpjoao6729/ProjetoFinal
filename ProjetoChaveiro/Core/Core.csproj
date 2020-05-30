@@ -41,7 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Negocio\ClasseDeNegocio\Email.cs" />
+    <Compile Include="Negocio\ClasseDeNegocio\Endereco.cs" />
+    <Compile Include="Negocio\ClasseDeNegocio\Fornecedor.cs" />
     <Compile Include="Negocio\ClasseDeNegocio\ICliente.cs" />
+    <Compile Include="Negocio\ClasseDeNegocio\IObjeto.cs" />
+    <Compile Include="Negocio\ClasseDeNegocio\ItemOrdemDeServico.cs" />
+    <Compile Include="Negocio\ClasseDeNegocio\Operador.cs" />
+    <Compile Include="Negocio\ClasseDeNegocio\OrdemDeServico.cs" />
+    <Compile Include="Negocio\ClasseDeNegocio\Permissoes.cs" />
+    <Compile Include="Negocio\ClasseDeNegocio\PessoaFisica.cs" />
+    <Compile Include="Negocio\ClasseDeNegocio\PessoaJuridica.cs" />
+    <Compile Include="Negocio\ClasseDeNegocio\Produto.cs" />
+    <Compile Include="Negocio\ClasseDeNegocio\Telefone.cs" />
     <Compile Include="Negocio\Enumerador\EnumeradorMenus\EnumeradorMenuCadastro.cs" />
     <Compile Include="Negocio\Enumerador\EnumeradorMenus\EnumeradorMenuCaixa.cs" />
     <Compile Include="Negocio\Enumerador\EnumeradorMenus\EnumeradorMenuConfiguracoes.cs" />
@@ -49,7 +61,10 @@
     <Compile Include="Negocio\Enumerador\EnumeradorMenus\EnumeradorMenuOrdemServico.cs" />
     <Compile Include="Negocio\Enumerador\EnumeradorMenus\MenuAplicacao.cs" />
     <Compile Include="Negocio\Enumerador\EnumeradorSeguro.cs" />
+    <Compile Include="Negocio\Enumerador\EnumeradorTelefone.cs" />
+    <Compile Include="Negocio\Enumerador\EnumeradorUF.cs" />
     <Compile Include="Negocio\Exception\FormularioNaoEncontradoException.cs" />
+    <Compile Include="Processo\ProcessoDeCliente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
