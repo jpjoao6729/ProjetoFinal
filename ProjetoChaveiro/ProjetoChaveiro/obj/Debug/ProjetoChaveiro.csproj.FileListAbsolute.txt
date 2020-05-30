@@ -1,0 +1,120 @@
+C:\Users\Home\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\bin\Debug\ProjetoChaveiro.exe.config
+C:\Users\Home\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\bin\Debug\ProjetoChaveiro.exe
+C:\Users\Home\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\bin\Debug\ProjetoChaveiro.pdb
+C:\Users\Home\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmPrincipal.resources
+C:\Users\Home\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmBase.resources
+C:\Users\Home\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.Properties.Resources.resources
+C:\Users\Home\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.csproj.GenerateResource.cache
+C:\Users\Home\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.exe
+C:\Users\Home\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.pdb
+C:\Users\Home\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmCadastroCliente.resources
+C:\Users\Home\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmCadastroDeFuncioanio.resources
+C:\Users\Home\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmCadastroProdutos.resources
+C:\Users\Home\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.csprojAssemblyReference.cache
+C:\Users\Home\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.csproj.CoreCompileInputs.cache
+C:\Users\Home\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\bin\Debug\Core.dll
+C:\Users\Home\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\bin\Debug\Core.pdb
+C:\Users\Home\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.csproj.CopyComplete
+C:\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\bin\Debug\ProjetoChaveiro.exe.config
+C:\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\bin\Debug\ProjetoChaveiro.exe
+C:\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\bin\Debug\ProjetoChaveiro.pdb
+C:\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\bin\Debug\Core.dll
+C:\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\bin\Debug\Core.pdb
+C:\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.csprojAssemblyReference.cache
+C:\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmPrincipal.resources
+C:\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmBase.resources
+C:\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmCadastroCliente.resources
+C:\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmCadastroDeFuncioanio.resources
+C:\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmCadastroProdutos.resources
+C:\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.Properties.Resources.resources
+C:\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.csproj.GenerateResource.cache
+C:\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.csproj.CoreCompileInputs.cache
+C:\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.csproj.CopyComplete
+C:\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.exe
+C:\Desktop\joaoPaulo\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.pdb
+C:\Joao\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\bin\Debug\ProjetoChaveiro.exe.config
+C:\Joao\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\bin\Debug\ProjetoChaveiro.exe
+C:\Joao\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\bin\Debug\ProjetoChaveiro.pdb
+C:\Joao\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\bin\Debug\Core.dll
+C:\Joao\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\bin\Debug\Core.pdb
+C:\Joao\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.csprojAssemblyReference.cache
+C:\Joao\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.Controles.ctlEmail.resources
+C:\Joao\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.Controles.ctlEndereco.resources
+C:\Joao\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.Controles.ctlTelefone.resources
+C:\Joao\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmPrincipal.resources
+C:\Joao\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmBase.resources
+C:\Joao\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.Properties.Resources.resources
+C:\Joao\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.csproj.GenerateResource.cache
+C:\Joao\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.csproj.CoreCompileInputs.cache
+C:\Joao\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.csproj.CopyComplete
+C:\Joao\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.exe
+C:\Joao\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.pdb
+C:\Joao\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmCadastroDeCliente.resources
+C:\Joao\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmCadastroDeProduto.resources
+C:\Joao\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.PublicadorDeException.resources
+C:\Joao\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmCadastroDeFuncionario.resources
+C:\Users\rodrigo.almeida\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.exe
+C:\Users\rodrigo.almeida\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.pdb
+C:\Users\rodrigo.almeida\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.csprojAssemblyReference.cache
+C:\Users\rodrigo.almeida\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.Controles.ctlEmail.resources
+C:\Users\rodrigo.almeida\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.Controles.ctlEndereco.resources
+C:\Users\rodrigo.almeida\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.Controles.ctlTelefone.resources
+C:\Users\rodrigo.almeida\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmPrincipal.resources
+C:\Users\rodrigo.almeida\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmBase.resources
+C:\Users\rodrigo.almeida\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmCadastroDeCliente.resources
+C:\Users\rodrigo.almeida\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmCadastroDeFornecedor.resources
+C:\Users\rodrigo.almeida\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmCadastroDeFuncionario.resources
+C:\Users\rodrigo.almeida\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmCadastroOperador.resources
+C:\Users\rodrigo.almeida\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.Properties.Resources.resources
+C:\Users\rodrigo.almeida\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.PublicadorDeException.resources
+C:\Users\rodrigo.almeida\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.csproj.GenerateResource.cache
+C:\Users\rodrigo.almeida\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.csproj.CoreCompileInputs.cache
+C:\Users\rodrigo.almeida\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\bin\Debug\ProjetoChaveiro.exe.config
+C:\Users\rodrigo.almeida\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\bin\Debug\ProjetoChaveiro.exe
+C:\Users\rodrigo.almeida\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\bin\Debug\ProjetoChaveiro.pdb
+C:\Users\rodrigo.almeida\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\bin\Debug\Core.dll
+C:\Users\rodrigo.almeida\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\bin\Debug\Core.pdb
+C:\Users\rodrigo.almeida\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.csproj.CopyComplete
+C:\Users\rodrigo.almeida\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmProdutos.resources
+C:\Users\rodrigo.almeida\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.Telascadastros.frmCadastroProduto.resources
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\bin\Debug\ProjetoChaveiro.exe.config
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\bin\Debug\ProjetoChaveiro.exe
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\bin\Debug\ProjetoChaveiro.pdb
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\bin\Debug\Core.dll
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\bin\Debug\Core.pdb
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.csprojAssemblyReference.cache
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.Controles.ctlEmail.resources
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.Controles.ctlEndereco.resources
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.Controles.ctlTelefone.resources
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmPrincipal.resources
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmBase.resources
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmCliente.resources
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmFornecedor.resources
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmOperador.resources
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmProduto.resources
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.Properties.Resources.resources
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.PublicadorDeException.resources
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.Telascadastros.frmCadastroFornecedor.resources
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.Telascadastros.frmCadastroOperador.resources
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.Telascadastros.frmCadastroProduto.resources
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.Telascadastros.frmCadastroCliente.resources
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.csproj.GenerateResource.cache
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.csproj.CopyComplete
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.exe
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.pdb
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.Controles.ctlPesquisaProduto.resources
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmNovaOrdemDeServico.resources
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.Telascadastros.frmCadastroOrdemServico.resources
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.Controles.DataGridViewFacil.resources
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.Telascadastros.frmCadastroServico.resources
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmEmissaoDeEstoque.resources
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.Controles.ctlPesquisaDeServico.resources
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmServicos.resources
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.TelasComplementares.frmSelecaoProdutos.resources
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.TelasComplementares.frmSelecaoServicos.resources
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.Controles.ctlData.resources
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmEmissaoOrdemDeServico.resources
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.OrdemDeServico.resources
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmMovimentacoesEstoque.resources
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.Telascadastros.frmEntradaEstoque.resources
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmPermissoes.resources
