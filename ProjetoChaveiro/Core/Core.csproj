@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MetodosDeExtensao.cs" />
     <Compile Include="Negocio\ClasseDeNegocio\Email.cs" />
     <Compile Include="Negocio\ClasseDeNegocio\Endereco.cs" />
     <Compile Include="Negocio\ClasseDeNegocio\Fornecedor.cs" />
@@ -65,6 +66,9 @@
     <Compile Include="Negocio\Enumerador\EnumeradorUF.cs" />
     <Compile Include="Negocio\Exception\FormularioNaoEncontradoException.cs" />
     <Compile Include="Processo\ProcessoDeCliente.cs" />
+    <Compile Include="Processo\ProcessoDeFornecedor.cs" />
+    <Compile Include="Processo\ProcessoDeOperador.cs" />
+    <Compile Include="Processo\ProcessoDeProduto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

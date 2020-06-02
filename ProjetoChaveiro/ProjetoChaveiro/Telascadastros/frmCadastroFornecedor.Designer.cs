@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.InpCodigoFornecedor = new System.Windows.Forms.TextBox();
+            this.inpNomeFantasia = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.InpRazaoSocial = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.ctlEmail1 = new ProjetoChaveiro.Controles.ctlEmail();
             this.ctlEndereco1 = new ProjetoChaveiro.Controles.ctlEndereco();
             this.ctlTelefone1 = new ProjetoChaveiro.Controles.ctlTelefone();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.mkpCnpjFornecedor = new System.Windows.Forms.MaskedTextBox();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,19 +55,19 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Codigo:";
             // 
-            // textBox2
+            // InpCodigoFornecedor
             // 
-            this.textBox2.Location = new System.Drawing.Point(117, 15);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 6;
+            this.InpCodigoFornecedor.Location = new System.Drawing.Point(117, 15);
+            this.InpCodigoFornecedor.Name = "InpCodigoFornecedor";
+            this.InpCodigoFornecedor.Size = new System.Drawing.Size(100, 20);
+            this.InpCodigoFornecedor.TabIndex = 6;
             // 
-            // textBox3
+            // inpNomeFantasia
             // 
-            this.textBox3.Location = new System.Drawing.Point(117, 64);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(462, 20);
-            this.textBox3.TabIndex = 3;
+            this.inpNomeFantasia.Location = new System.Drawing.Point(117, 64);
+            this.inpNomeFantasia.Name = "inpNomeFantasia";
+            this.inpNomeFantasia.Size = new System.Drawing.Size(462, 20);
+            this.inpNomeFantasia.TabIndex = 3;
             // 
             // label4
             // 
@@ -79,12 +79,12 @@
             this.label4.TabIndex = 2;
             this.label4.Text = "Nome Fantasia:";
             // 
-            // textBox4
+            // InpRazaoSocial
             // 
-            this.textBox4.Location = new System.Drawing.Point(117, 40);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(462, 20);
-            this.textBox4.TabIndex = 1;
+            this.InpRazaoSocial.Location = new System.Drawing.Point(117, 40);
+            this.InpRazaoSocial.Name = "InpRazaoSocial";
+            this.InpRazaoSocial.Size = new System.Drawing.Size(462, 20);
+            this.InpRazaoSocial.TabIndex = 1;
             // 
             // label5
             // 
@@ -98,26 +98,19 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.mkpCnpjFornecedor);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.textBox2);
-            this.groupBox3.Controls.Add(this.textBox3);
+            this.groupBox3.Controls.Add(this.InpCodigoFornecedor);
+            this.groupBox3.Controls.Add(this.inpNomeFantasia);
             this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.textBox4);
+            this.groupBox3.Controls.Add(this.InpRazaoSocial);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Location = new System.Drawing.Point(12, 94);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(596, 115);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(117, 88);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(208, 20);
-            this.textBox1.TabIndex = 11;
             // 
             // label2
             // 
@@ -170,6 +163,14 @@
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
+            // mkpCnpjFornecedor
+            // 
+            this.mkpCnpjFornecedor.Location = new System.Drawing.Point(117, 88);
+            this.mkpCnpjFornecedor.Mask = "00.000.000/000-00";
+            this.mkpCnpjFornecedor.Name = "mkpCnpjFornecedor";
+            this.mkpCnpjFornecedor.Size = new System.Drawing.Size(168, 20);
+            this.mkpCnpjFornecedor.TabIndex = 11;
+            // 
             // frmCadastroFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,18 +201,18 @@
 
         #endregion
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox InpCodigoFornecedor;
+        private System.Windows.Forms.TextBox inpNomeFantasia;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox InpRazaoSocial;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox3;
         private Controles.ctlEmail ctlEmail1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private Controles.ctlEndereco ctlEndereco1;
         private Controles.ctlTelefone ctlTelefone1;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.MaskedTextBox mkpCnpjFornecedor;
     }
 }

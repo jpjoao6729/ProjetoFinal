@@ -30,13 +30,13 @@
         {
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.mkpCpf = new System.Windows.Forms.MaskedTextBox();
+            this.InpFuncao = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.InpNome = new System.Windows.Forms.TextBox();
+            this.InpCodigoOperador = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.ctlEndereco1 = new ProjetoChaveiro.Controles.ctlEndereco();
             this.ctlEmail1 = new ProjetoChaveiro.Controles.ctlEmail();
@@ -61,13 +61,13 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.textBox4);
+            this.groupBox4.Controls.Add(this.mkpCpf);
+            this.groupBox4.Controls.Add(this.InpFuncao);
             this.groupBox4.Controls.Add(this.label5);
-            this.groupBox4.Controls.Add(this.textBox3);
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Controls.Add(this.label3);
-            this.groupBox4.Controls.Add(this.textBox2);
-            this.groupBox4.Controls.Add(this.textBox1);
+            this.groupBox4.Controls.Add(this.InpNome);
+            this.groupBox4.Controls.Add(this.InpCodigoOperador);
             this.groupBox4.Controls.Add(this.label2);
             this.groupBox4.Location = new System.Drawing.Point(7, 13);
             this.groupBox4.Name = "groupBox4";
@@ -75,12 +75,20 @@
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             // 
-            // textBox4
+            // mkpCpf
             // 
-            this.textBox4.Location = new System.Drawing.Point(359, 74);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(219, 20);
-            this.textBox4.TabIndex = 7;
+            this.mkpCpf.Location = new System.Drawing.Point(113, 74);
+            this.mkpCpf.Mask = "000.000.000-00";
+            this.mkpCpf.Name = "mkpCpf";
+            this.mkpCpf.Size = new System.Drawing.Size(170, 20);
+            this.mkpCpf.TabIndex = 8;
+            // 
+            // InpFuncao
+            // 
+            this.InpFuncao.Location = new System.Drawing.Point(353, 75);
+            this.InpFuncao.Name = "InpFuncao";
+            this.InpFuncao.Size = new System.Drawing.Size(219, 20);
+            this.InpFuncao.TabIndex = 7;
             // 
             // label5
             // 
@@ -91,13 +99,6 @@
             this.label5.Size = new System.Drawing.Size(59, 17);
             this.label5.TabIndex = 6;
             this.label5.Text = "Função:";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(113, 74);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(160, 20);
-            this.textBox3.TabIndex = 5;
             // 
             // label4
             // 
@@ -118,21 +119,20 @@
             this.label3.Size = new System.Drawing.Size(49, 17);
             this.label3.TabIndex = 3;
             this.label3.Text = "Nome:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // textBox2
+            // InpNome
             // 
-            this.textBox2.Location = new System.Drawing.Point(113, 44);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(309, 20);
-            this.textBox2.TabIndex = 2;
+            this.InpNome.Location = new System.Drawing.Point(113, 44);
+            this.InpNome.Name = "InpNome";
+            this.InpNome.Size = new System.Drawing.Size(309, 20);
+            this.InpNome.TabIndex = 2;
             // 
-            // textBox1
+            // InpCodigoOperador
             // 
-            this.textBox1.Location = new System.Drawing.Point(113, 17);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.InpCodigoOperador.Location = new System.Drawing.Point(113, 17);
+            this.InpCodigoOperador.Name = "InpCodigoOperador";
+            this.InpCodigoOperador.Size = new System.Drawing.Size(100, 20);
+            this.InpCodigoOperador.TabIndex = 1;
             // 
             // label2
             // 
@@ -173,6 +173,7 @@
             this.button1.TabIndex = 7;
             this.button1.Text = "Salvar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -211,17 +212,17 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox InpNome;
+        private System.Windows.Forms.TextBox InpCodigoOperador;
         private System.Windows.Forms.Label label2;
         private Controles.ctlEndereco ctlEndereco1;
         private Controles.ctlEmail ctlEmail1;
         private Controles.ctlTelefone ctlTelefone1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox InpFuncao;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.MaskedTextBox mkpCpf;
     }
 }
