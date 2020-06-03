@@ -25,7 +25,7 @@ namespace ProjetoChaveiro.Telascadastros
             try
             {
                 new ProcessoDeOperador().SalveNoBanco(Operador);
-                MessageBox.Show("OperadorSalvo com sucesso.", "Sucesso.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Operador Salvo com sucesso.", "Sucesso.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
             }
             catch (Exception erro)

@@ -1,6 +1,6 @@
 ﻿namespace ProjetoChaveiro.Telascadastros
 {
-    partial class frmCadastroProduto
+    partial class frmCadastroDeProduto
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.InpUnidade = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.InpPreco = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.InpProduto = new System.Windows.Forms.TextBox();
+            this.InpCodigoProduto = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -42,12 +42,12 @@
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // InpUnidade
             // 
-            this.textBox1.Location = new System.Drawing.Point(262, 66);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(89, 20);
-            this.textBox1.TabIndex = 9;
+            this.InpUnidade.Location = new System.Drawing.Point(262, 66);
+            this.InpUnidade.Name = "InpUnidade";
+            this.InpUnidade.Size = new System.Drawing.Size(89, 20);
+            this.InpUnidade.TabIndex = 9;
             // 
             // label2
             // 
@@ -59,12 +59,12 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Unidade:";
             // 
-            // textBox2
+            // InpPreco
             // 
-            this.textBox2.Location = new System.Drawing.Point(76, 66);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 7;
+            this.InpPreco.Location = new System.Drawing.Point(76, 66);
+            this.InpPreco.Name = "InpPreco";
+            this.InpPreco.Size = new System.Drawing.Size(100, 20);
+            this.InpPreco.TabIndex = 7;
             // 
             // label3
             // 
@@ -76,19 +76,19 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Preço:";
             // 
-            // textBox3
+            // InpProduto
             // 
-            this.textBox3.Location = new System.Drawing.Point(76, 41);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(275, 20);
-            this.textBox3.TabIndex = 4;
+            this.InpProduto.Location = new System.Drawing.Point(76, 41);
+            this.InpProduto.Name = "InpProduto";
+            this.InpProduto.Size = new System.Drawing.Size(275, 20);
+            this.InpProduto.TabIndex = 4;
             // 
-            // textBox4
+            // InpCodigoProduto
             // 
-            this.textBox4.Location = new System.Drawing.Point(76, 16);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 3;
+            this.InpCodigoProduto.Location = new System.Drawing.Point(76, 16);
+            this.InpCodigoProduto.Name = "InpCodigoProduto";
+            this.InpCodigoProduto.Size = new System.Drawing.Size(100, 20);
+            this.InpCodigoProduto.TabIndex = 3;
             // 
             // label4
             // 
@@ -112,12 +112,12 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.InpUnidade);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.InpPreco);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.textBox4);
+            this.groupBox2.Controls.Add(this.InpProduto);
+            this.groupBox2.Controls.Add(this.InpCodigoProduto);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Location = new System.Drawing.Point(7, 91);
@@ -134,6 +134,7 @@
             this.btnSalvar.TabIndex = 6;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnCancelar
             // 
@@ -144,7 +145,7 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // frmCadastroProduto
+            // frmCadastroDeProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -154,7 +155,7 @@
             this.Controls.Add(this.groupBox2);
             this.MaximumSize = new System.Drawing.Size(591, 265);
             this.MinimumSize = new System.Drawing.Size(591, 265);
-            this.Name = "frmCadastroProduto";
+            this.Name = "frmCadastroDeProduto";
             this.Text = "CadastroProduto";
             this.Controls.SetChildIndex(this.groupBox2, 0);
             this.Controls.SetChildIndex(this.btnSalvar, 0);
@@ -168,12 +169,12 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox InpUnidade;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox InpPreco;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox InpProduto;
+        private System.Windows.Forms.TextBox InpCodigoProduto;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox2;

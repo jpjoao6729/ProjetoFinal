@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Core
 {
@@ -15,6 +14,14 @@ namespace Core
                 return valorConvertido;
             }
             throw new Exception("Valor não pode ser convertido para int");
+        }
+        public static decimal ConvertaParaDecimal(this string valor)
+        {
+            if(decimal.TryParse(valor, out decimal valorConvertido))
+            {
+                return valorConvertido;
+            }
+            throw new Exception("Valor não pode ser convertido para decimal");
         }
     }
 }

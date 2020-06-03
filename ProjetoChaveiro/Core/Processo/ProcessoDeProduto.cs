@@ -11,7 +11,7 @@ namespace Core.Processo
     {
         public void SalveNoBanco(Produto produto)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
         public int ObtenhaProximoCodigo()
         {
@@ -21,5 +21,16 @@ namespace Core.Processo
         {
             throw new NotImplementedException();
         }
+
+        public object ObtenhaCodigo()
+        {
+            return 0;
+        }
+
+
     }
+
 }
+
+
+

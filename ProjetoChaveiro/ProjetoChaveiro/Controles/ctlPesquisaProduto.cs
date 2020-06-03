@@ -74,13 +74,13 @@ namespace ProjetoChaveiro.Controles
 
         private void AbraFormularioEditar()
         {
-            var form = new frmCadastroProduto();
+            var form = new frmCadastroDeProduto();
             form.Show();
         }
 
         private void AbraFormularioNovo()
         {
-            var form = new frmCadastroProduto();
+            var form = new frmCadastroDeProduto();
             form.Show();
         }
 
