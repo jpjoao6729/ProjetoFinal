@@ -9,5 +9,9 @@ namespace Core.Negocio.ClasseDeNegocio
     public class Email
     {
         public string Texto { get; set; }
+        public string ToString()
+        {
+            return $"{Texto}";
+        }
     }
 }

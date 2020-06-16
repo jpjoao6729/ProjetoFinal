@@ -45,6 +45,7 @@
             this.inpDescricao.Name = "inpDescricao";
             this.inpDescricao.Size = new System.Drawing.Size(436, 20);
             this.inpDescricao.TabIndex = 17;
+            this.inpDescricao.TextChanged += new System.EventHandler(this.inpDescricao_TextChanged);
             // 
             // button3
             // 

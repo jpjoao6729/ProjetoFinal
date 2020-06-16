@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Core.Negocio.ClasseDeNegocio;
+using Core.Processo;
 
 namespace ProjetoChaveiro.Controles
 {
@@ -44,6 +45,17 @@ namespace ProjetoChaveiro.Controles
                 Complemento = inpComplemento.Text,
                 UF = ctlUF1.ObtenhaUF()
             };
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           var endereco = new ProcessoDeEndereco().Pesquise(mkCEP.Text);
+            mkCEP.Text = endereco.CEP;
+            inpCidade.Text = endereco.Cidade;
+            inpLogradouro.Text = endereco.Logradouro;
+            inpBairro.Text = endereco.Bairro;
+            inpComplemento.Text = endereco.Complemento;
+            ctlUF1.SelecioneUF(endereco.UF);
         }
     }
 }

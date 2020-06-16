@@ -26,5 +26,11 @@ namespace Core.Negocio.Enumeradores
             return propriedades.Where(x => x.Codigo.Equals(codigo)).FirstOrDefault();
         }
 
+        public static Enumerador Obtenha<Enumerador>(string codigo) where Enumerador : EnumeradorSeguro<T>
+        {
+            var propriedades = ObtenhaTodos<Enumerador>();
+            return propriedades.Where(x => x.Codigo.Equals(codigo)).FirstOrDefault();
+        }
+
     }
 }

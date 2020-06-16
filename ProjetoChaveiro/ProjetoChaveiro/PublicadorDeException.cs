@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Core.Negocio.Exception;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,10 @@ namespace ProjetoChaveiro
             InitializeComponent();
             txtDescricao.Text = exception.Message;
             this.Show();
+        }
+        public PublicadorDeException(InconsistenciaException exception)
+        {
+
         }
     }
 }

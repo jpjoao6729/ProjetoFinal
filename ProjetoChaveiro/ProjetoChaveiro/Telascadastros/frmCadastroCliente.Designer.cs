@@ -114,9 +114,9 @@
             this.lblCpfCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCpfCnpj.Location = new System.Drawing.Point(6, 86);
             this.lblCpfCnpj.Name = "lblCpfCnpj";
-            this.lblCpfCnpj.Size = new System.Drawing.Size(47, 17);
+            this.lblCpfCnpj.Size = new System.Drawing.Size(38, 17);
             this.lblCpfCnpj.TabIndex = 10;
-            this.lblCpfCnpj.Text = "CNPJ:";
+            this.lblCpfCnpj.Text = "CPF:";
             // 
             // inpCodigo
             // 

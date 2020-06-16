@@ -28,26 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.InpUnidade = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.InpPreco = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.InpProduto = new System.Windows.Forms.TextBox();
             this.InpCodigoProduto = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.chkAtivo = new System.Windows.Forms.CheckBox();
+            this.inpPreco = new System.Windows.Forms.TextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.ctlUnidadeProduto1 = new ProjetoChaveiro.Controles.ctlUnidadeProduto();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // InpUnidade
-            // 
-            this.InpUnidade.Location = new System.Drawing.Point(262, 66);
-            this.InpUnidade.Name = "InpUnidade";
-            this.InpUnidade.Size = new System.Drawing.Size(89, 20);
-            this.InpUnidade.TabIndex = 9;
             // 
             // label2
             // 
@@ -58,13 +52,6 @@
             this.label2.Size = new System.Drawing.Size(65, 17);
             this.label2.TabIndex = 8;
             this.label2.Text = "Unidade:";
-            // 
-            // InpPreco
-            // 
-            this.InpPreco.Location = new System.Drawing.Point(76, 66);
-            this.InpPreco.Name = "InpPreco";
-            this.InpPreco.Size = new System.Drawing.Size(100, 20);
-            this.InpPreco.TabIndex = 7;
             // 
             // label3
             // 
@@ -80,7 +67,7 @@
             // 
             this.InpProduto.Location = new System.Drawing.Point(76, 41);
             this.InpProduto.Name = "InpProduto";
-            this.InpProduto.Size = new System.Drawing.Size(275, 20);
+            this.InpProduto.Size = new System.Drawing.Size(286, 20);
             this.InpProduto.TabIndex = 4;
             // 
             // InpCodigoProduto
@@ -112,9 +99,10 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.InpUnidade);
+            this.groupBox2.Controls.Add(this.ctlUnidadeProduto1);
+            this.groupBox2.Controls.Add(this.chkAtivo);
+            this.groupBox2.Controls.Add(this.inpPreco);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.InpPreco);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.InpProduto);
             this.groupBox2.Controls.Add(this.InpCodigoProduto);
@@ -125,6 +113,23 @@
             this.groupBox2.Size = new System.Drawing.Size(449, 109);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
+            // 
+            // chkAtivo
+            // 
+            this.chkAtivo.AutoSize = true;
+            this.chkAtivo.Location = new System.Drawing.Point(308, 16);
+            this.chkAtivo.Name = "chkAtivo";
+            this.chkAtivo.Size = new System.Drawing.Size(50, 17);
+            this.chkAtivo.TabIndex = 11;
+            this.chkAtivo.Text = "Ativo";
+            this.chkAtivo.UseVisualStyleBackColor = true;
+            // 
+            // inpPreco
+            // 
+            this.inpPreco.Location = new System.Drawing.Point(76, 69);
+            this.inpPreco.Name = "inpPreco";
+            this.inpPreco.Size = new System.Drawing.Size(100, 20);
+            this.inpPreco.TabIndex = 10;
             // 
             // btnSalvar
             // 
@@ -144,6 +149,14 @@
             this.btnCancelar.TabIndex = 7;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
+            // 
+            // ctlUnidadeProduto1
+            // 
+            this.ctlUnidadeProduto1.Location = new System.Drawing.Point(257, 69);
+            this.ctlUnidadeProduto1.Name = "ctlUnidadeProduto1";
+            this.ctlUnidadeProduto1.Size = new System.Drawing.Size(105, 21);
+            this.ctlUnidadeProduto1.TabIndex = 12;
             // 
             // frmCadastroDeProduto
             // 
@@ -168,10 +181,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox InpUnidade;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox InpPreco;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox InpProduto;
         private System.Windows.Forms.TextBox InpCodigoProduto;
@@ -180,5 +190,8 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.TextBox inpPreco;
+        private System.Windows.Forms.CheckBox chkAtivo;
+        private Controles.ctlUnidadeProduto ctlUnidadeProduto1;
     }
 }

@@ -23,5 +23,12 @@ namespace Core
             }
             throw new Exception("Valor não pode ser convertido para decimal");
         }
+        public static string RemovaCharEspeciais(this string valor)
+        {
+
+            var t = valor.Replace("Ã¢", "a"); 
+            return t;
+        }
+
     }
 }

@@ -23,5 +23,9 @@ namespace ProjetoChaveiro.Controles
             var itemSelecionado = comboBox1.SelectedItem as EnumeradorUF;
             return itemSelecionado;
         }
+        public void SelecioneUF(EnumeradorUF uf)
+        {
+            comboBox1.SelectedItem = uf;
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Core.Negocio.ClasseDeNegocio;
+﻿using Core;
+using Core.Negocio.ClasseDeNegocio;
 using Core.Processo;
 using System;
 using System.Windows.Forms;
@@ -32,9 +33,9 @@ namespace ProjetoChaveiro.Telascadastros
             }
         }
 
-        private ICliente CrieCliente()
+        private ClienteAbstrato CrieCliente()
         {
-            ICliente pessoa;
+            ClienteAbstrato pessoa;
             if(rbFisico.Checked)
             {
                 pessoa = new PessoaFisica()
@@ -50,7 +51,7 @@ namespace ProjetoChaveiro.Telascadastros
                     RazaoSocial = inpRazaoSocial.Text
                 };
             }
-
+            pessoa.Codigo = inpCodigo.Text.ConvertaParaInt();
             pessoa.Nome = inpNome.Text;
             pessoa.Endereco = ctlEndereco1.ObtenhaEndereco();
             pessoa.Telefone = ctlTelefone1.ObtenhaTelefone();
@@ -62,6 +63,7 @@ namespace ProjetoChaveiro.Telascadastros
         {
             if (inpNome.Text == "")
             {
+                MessageBox.Show("Nome vazio.", "Inconsistencia.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
@@ -70,6 +72,7 @@ namespace ProjetoChaveiro.Telascadastros
             {
                 if(mkCpfCnpj.Text == "___-___-___.__")
                 {
+                    MessageBox.Show("Campo CPF vazio.", "Inconsistencia.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
             }
@@ -77,26 +80,31 @@ namespace ProjetoChaveiro.Telascadastros
             {
                 if (mkCpfCnpj.Text == "__.___.___/____-__")
                 {
+                    MessageBox.Show("Campo CNPJ vazio.", "Inconsistencia.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
                 if(inpRazaoSocial.Text == "")
                 {
+                    MessageBox.Show("Razão social Vazio.", "Inconsistencia.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
             }
 
             if(!ctlEndereco1.EhValido())
             {
+                MessageBox.Show("Endereço inválido.", "Inconsistencia.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
             if(!ctlTelefone1.EhValido())
             {
+                MessageBox.Show("Telefone inválido.", "Inconsistencia.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
             if(!ctlEmail1.EhValido())
             {
+                MessageBox.Show("E-mail inválido.", "Inconsistencia.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 

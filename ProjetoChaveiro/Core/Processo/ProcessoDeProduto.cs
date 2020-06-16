@@ -1,4 +1,5 @@
 ﻿using Core.Negocio.ClasseDeNegocio;
+using Core.Negocio.Mapeadores;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,23 +12,17 @@ namespace Core.Processo
     {
         public void SalveNoBanco(Produto produto)
         {
-            //throw new NotImplementedException();
+            new MapeadorDeProduto().Salve(produto);
         }
         public int ObtenhaProximoCodigo()
         {
-            return 0;
+            return new MapeadorDeProduto().ObtenhaProximoCodigo();
         }
-        public void SalveNoBanco(object Produto)
+
+        public List<Produto> ObtenhaPorDescricao(string text)
         {
-            throw new NotImplementedException();
+            return new MapeadorDeProduto().ObtenhaPorDescricao(text);
         }
-
-        public object ObtenhaCodigo()
-        {
-            return 0;
-        }
-
-
     }
 
 }

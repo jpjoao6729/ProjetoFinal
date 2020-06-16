@@ -34,7 +34,6 @@
             // 
             // lblNomeFuncao
             // 
-            this.lblNomeFuncao.Click += new System.EventHandler(this.lblNomeFuncao_Click);
             // 
             // ctlPesquisaProduto1
             // 
@@ -53,7 +52,6 @@
             this.MinimumSize = new System.Drawing.Size(592, 330);
             this.Name = "frmProduto";
             this.Text = "";
-            this.Load += new System.EventHandler(this.frmCadastroProdutos_Load);
             this.Controls.SetChildIndex(this.ctlPesquisaProduto1, 0);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Core.Negocio.ClasseDeNegocio
 {
-    public class PessoaJuridica : ICliente
+    public class PessoaJuridica : ClienteAbstrato
     {
         public string CNPJ { get; set;}
         public string RazaoSocial { get; set; }

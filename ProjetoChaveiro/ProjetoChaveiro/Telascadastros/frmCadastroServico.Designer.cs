@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.inpPreco = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.inpDescricao = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.inpCodigo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
@@ -42,25 +42,24 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBox3);
+            this.groupBox3.Controls.Add(this.inpPreco);
             this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.textBox2);
+            this.groupBox3.Controls.Add(this.inpDescricao);
             this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.inpCodigo);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Location = new System.Drawing.Point(13, 107);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(422, 114);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
-            // textBox3
+            // inpPreco
             // 
-            this.textBox3.Location = new System.Drawing.Point(78, 73);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 9;
+            this.inpPreco.Location = new System.Drawing.Point(78, 73);
+            this.inpPreco.Name = "inpPreco";
+            this.inpPreco.Size = new System.Drawing.Size(100, 20);
+            this.inpPreco.TabIndex = 9;
             // 
             // label4
             // 
@@ -72,12 +71,12 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Preço:";
             // 
-            // textBox2
+            // inpDescricao
             // 
-            this.textBox2.Location = new System.Drawing.Point(78, 47);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(295, 20);
-            this.textBox2.TabIndex = 3;
+            this.inpDescricao.Location = new System.Drawing.Point(78, 47);
+            this.inpDescricao.Name = "inpDescricao";
+            this.inpDescricao.Size = new System.Drawing.Size(295, 20);
+            this.inpDescricao.TabIndex = 3;
             // 
             // label3
             // 
@@ -89,12 +88,13 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Serviço:";
             // 
-            // textBox1
+            // inpCodigo
             // 
-            this.textBox1.Location = new System.Drawing.Point(78, 20);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.inpCodigo.Enabled = false;
+            this.inpCodigo.Location = new System.Drawing.Point(78, 20);
+            this.inpCodigo.Name = "inpCodigo";
+            this.inpCodigo.Size = new System.Drawing.Size(100, 20);
+            this.inpCodigo.TabIndex = 1;
             // 
             // label2
             // 
@@ -114,6 +114,7 @@
             this.btnCancelar.TabIndex = 9;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnSalvar
             // 
@@ -123,6 +124,7 @@
             this.btnSalvar.TabIndex = 8;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // frmCadastroServico
             // 
@@ -150,10 +152,10 @@
 
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox inpDescricao;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox inpCodigo;
+        private System.Windows.Forms.TextBox inpPreco;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnSalvar;

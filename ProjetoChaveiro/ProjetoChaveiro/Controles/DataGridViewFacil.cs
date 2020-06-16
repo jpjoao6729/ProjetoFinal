@@ -15,6 +15,7 @@ namespace ProjetoChaveiro.Controles
         public DataGridViewFacil()
         {
             InitializeComponent();
+            this.dgv.AutoGenerateColumns = false;
         }
 
         public void CarregueBindSource(BindingSource bsDataGride)

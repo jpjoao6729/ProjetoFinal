@@ -13,7 +13,7 @@ namespace Core.Negocio.ClasseDeNegocio
         public Email Email;
         public Telefone Telefone;
 
-        public object Codigo { get; set; }
+        public int Codigo { get; set; }
         public string Nome { get; set; }
 
         public string String()

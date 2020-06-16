@@ -90,6 +90,12 @@
     <Compile Include="Controles\ctlUF.Designer.cs">
       <DependentUpon>ctlUF.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controles\ctlUnidadeProduto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ctlUnidadeProduto.Designer.cs">
+      <DependentUpon>ctlUnidadeProduto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controles\DataGridViewFacil.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -284,6 +290,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\ctlUF.resx">
       <DependentUpon>ctlUF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ctlUnidadeProduto.resx">
+      <DependentUpon>ctlUnidadeProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\DataGridViewFacil.resx">
       <DependentUpon>DataGridViewFacil.cs</DependentUpon>

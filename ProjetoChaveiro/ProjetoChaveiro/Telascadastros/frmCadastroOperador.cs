@@ -52,16 +52,19 @@ namespace ProjetoChaveiro.Telascadastros
         {
             if (!ctlEndereco1.EhValido())
             {
+                MessageBox.Show("Endereço inválido.", "Inconsistencia.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
             if (!ctlTelefone1.EhValido())
             {
+                MessageBox.Show("Telefone inválido.", "Inconsistencia.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
             if (!ctlEmail1.EhValido())
             {
+                MessageBox.Show("E-mail inválido.", "Inconsistencia.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 

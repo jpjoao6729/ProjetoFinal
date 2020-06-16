@@ -8,20 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProjetoChaveiro.Telascadastros;
+using Core.Processo;
+using Core.Negocio.ClasseDeNegocio;
 
 namespace ProjetoChaveiro.Controles
 {
     public partial class ctlPesquisaProduto : UserControl
     {
         private class ProdutoMV
-        { 
-            public ProdutoMV()
+        {
+            private Produto _produto;
+            public ProdutoMV(Produto produto)
             {
-
+                _produto = produto;
             }
-            public int Codigo { get; set; }
-            public string Descricao { get; set; }
-            public decimal ValorProduto { get; set; }
+            public int Codigo => _produto.Codigo;
+            public string Descricao => _produto.Descricao;
+            public decimal ValorProduto => _produto.Valor;
         }
 
         private BindingSource _bs;
@@ -31,15 +34,17 @@ namespace ProjetoChaveiro.Controles
             InitializeComponent();
 
             CarregueDGV();
-            MetodoComplementar();
+            CarregueDadosProdutos();
             CarregueEventos();
         }
 
         private void CarregueDGV()
         {
+            _bs = new BindingSource();
+            dgvProdutos.CarregueBindSource(_bs);
             dgvProdutos.CrieCabecalho("Codigo", nameof(ProdutoMV.Codigo), 50);
-            dgvProdutos.CrieCabecalho("Descrição", nameof(ProdutoMV.Codigo), 150);
-            dgvProdutos.CrieCabecalho("Valor", nameof(ProdutoMV.Codigo), 232);
+            dgvProdutos.CrieCabecalhoPreenchido("Descrição", nameof(ProdutoMV.Descricao));
+            dgvProdutos.CrieCabecalho("Valor", nameof(ProdutoMV.ValorProduto), 232);
             dgvProdutos.DesabiliteHeader();
         }
 
@@ -47,17 +52,10 @@ namespace ProjetoChaveiro.Controles
         {
             _bs = bs;
         }
-        private void MetodoComplementar()
+        public void CarregueDadosProdutos()
         {
-            //dgvProdutos.ReadOnly = true;
-            var item = new ProdutoMV()
-            {
-                Codigo = 1,
-                Descricao = "Chave grande",
-                ValorProduto = 10
-            };
-
-            //dgvProdutos.DataSource = new List<ProdutoMV>() { item };
+            var produtos = new ProcessoDeProduto().ObtenhaPorDescricao(inpDescricao.Text);
+            _bs.DataSource = produtos.Select(x => new ProdutoMV(x));
         }
 
         public void AdicioneEvento(DataGridViewCellEventHandler eventoDeSelecao)
@@ -82,11 +80,17 @@ namespace ProjetoChaveiro.Controles
         {
             var form = new frmCadastroDeProduto();
             form.Show();
+            form.FormClosing += (object obj, FormClosingEventArgs evt) => { CarregueDadosProdutos(); };
         }
 
         private void ExcluaProduto()
         {
             //Apagar no banco
+        }
+
+        private void inpDescricao_TextChanged(object sender, EventArgs e)
+        {
+            CarregueDadosProdutos();
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Core.Negocio.ClasseDeNegocio
 {
-    public class PessoaFisica : ICliente
+    public class PessoaFisica : ClienteAbstrato
     {
         public string CPF { get; set; }
 

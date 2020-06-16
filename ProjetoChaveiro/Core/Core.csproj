@@ -31,8 +31,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FirebirdSql.Data.FirebirdClient, Version=7.5.0.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL">
+      <HintPath>..\packages\FirebirdSql.Data.FirebirdClient.7.5.0\lib\net452\FirebirdSql.Data.FirebirdClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,11 +48,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Negocio\Enumerador\EnumeradorUnidadeProduto.cs" />
+    <Compile Include="Negocio\Mapeadores\Conexao.cs" />
+    <Compile Include="Negocio\Mapeadores\MapeadorDeCliente.cs" />
     <Compile Include="MetodosDeExtensao.cs" />
     <Compile Include="Negocio\ClasseDeNegocio\Email.cs" />
     <Compile Include="Negocio\ClasseDeNegocio\Endereco.cs" />
     <Compile Include="Negocio\ClasseDeNegocio\Fornecedor.cs" />
-    <Compile Include="Negocio\ClasseDeNegocio\ICliente.cs" />
+    <Compile Include="Negocio\ClasseDeNegocio\ClienteAbstrato.cs" />
     <Compile Include="Negocio\ClasseDeNegocio\IObjeto.cs" />
     <Compile Include="Negocio\ClasseDeNegocio\ItemOrdemDeServico.cs" />
     <Compile Include="Negocio\ClasseDeNegocio\Operador.cs" />
@@ -65,12 +75,23 @@
     <Compile Include="Negocio\Enumerador\EnumeradorTelefone.cs" />
     <Compile Include="Negocio\Enumerador\EnumeradorUF.cs" />
     <Compile Include="Negocio\Exception\FormularioNaoEncontradoException.cs" />
+    <Compile Include="Negocio\Exception\InconsistenciaException.cs" />
+    <Compile Include="Negocio\Mapeadores\MapeadorDeProduto.cs" />
+    <Compile Include="Negocio\Tradutor\TradutorEndereco.cs" />
     <Compile Include="Processo\ProcessoDeCliente.cs" />
+    <Compile Include="Processo\ProcessoDeEndereco.cs" />
     <Compile Include="Processo\ProcessoDeFornecedor.cs" />
     <Compile Include="Processo\ProcessoDeOperador.cs" />
     <Compile Include="Processo\ProcessoDeProduto.cs" />
+    <Compile Include="Processo\ProcessoDeServico.cs" />
+    <Compile Include="Negocio\ClasseDeNegocio\Servico.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

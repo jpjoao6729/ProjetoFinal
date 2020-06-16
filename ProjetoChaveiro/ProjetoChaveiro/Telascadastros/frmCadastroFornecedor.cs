@@ -52,31 +52,38 @@ namespace ProjetoChaveiro.Telascadastros
         {
             if (inpNomeFantasia.Text == "")
             {
+                MessageBox.Show("Nome fantasia vazio.", "Inconsistencia.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
             if (InpRazaoSocial.Text == "")
             {
+                MessageBox.Show("Razão social está vazio.", "Inconsistencia.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
             if (mkpCnpjFornecedor.Text == "__.___.___ / ____ - __")
             {
+                MessageBox.Show("CNPJ vazio ou inválido", "Inconsistencia.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
             if (!ctlEndereco1.EhValido())
             {
+                MessageBox.Show("Endereço não é valido.", "Inconsistencia.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
             if (!ctlTelefone1.EhValido())
             {
+                throw new Exception();
+                MessageBox.Show("Telefone não é válido.", "Inconsistencia.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-
+            
             if (!ctlEmail1.EhValido())
             {
+                MessageBox.Show("E-mail não é vazio.", "Inconsistencia.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,10 +39,11 @@
             this.btnNovo = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
-            this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.inpDescricao = new System.Windows.Forms.TextBox();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewFacil1 = new ProjetoChaveiro.Controles.DataGridViewFacil();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -130,28 +132,28 @@
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
-            // dgvClientes
-            // 
-            this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClientes.Location = new System.Drawing.Point(13, 130);
-            this.dgvClientes.Name = "dgvClientes";
-            this.dgvClientes.Size = new System.Drawing.Size(429, 177);
-            this.dgvClientes.TabIndex = 9;
-            // 
             // inpDescricao
             // 
             this.inpDescricao.Location = new System.Drawing.Point(13, 101);
             this.inpDescricao.Name = "inpDescricao";
             this.inpDescricao.Size = new System.Drawing.Size(429, 20);
             this.inpDescricao.TabIndex = 10;
+            this.inpDescricao.TextChanged += new System.EventHandler(this.inpDescricao_TextChanged);
+            // 
+            // dataGridViewFacil1
+            // 
+            this.dataGridViewFacil1.Location = new System.Drawing.Point(13, 127);
+            this.dataGridViewFacil1.Name = "dataGridViewFacil1";
+            this.dataGridViewFacil1.Size = new System.Drawing.Size(429, 179);
+            this.dataGridViewFacil1.TabIndex = 11;
             // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(554, 335);
+            this.Controls.Add(this.dataGridViewFacil1);
             this.Controls.Add(this.inpDescricao);
-            this.Controls.Add(this.dgvClientes);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnNovo);
@@ -160,15 +162,18 @@
             this.MinimumSize = new System.Drawing.Size(570, 374);
             this.Name = "frmCliente";
             this.Text = "frmCadastroCliente";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmCliente_FormClosing);
+            this.Load += new System.EventHandler(this.frmCliente_Load);
+            this.Enter += new System.EventHandler(this.frmCliente_Enter);
             this.Controls.SetChildIndex(this.btnEditar, 0);
             this.Controls.SetChildIndex(this.btnNovo, 0);
             this.Controls.SetChildIndex(this.btnSair, 0);
             this.Controls.SetChildIndex(this.btnExcluir, 0);
-            this.Controls.SetChildIndex(this.dgvClientes, 0);
             this.Controls.SetChildIndex(this.inpDescricao, 0);
+            this.Controls.SetChildIndex(this.dataGridViewFacil1, 0);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,7 +190,8 @@
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnSair;
-        private System.Windows.Forms.DataGridView dgvClientes;
         private System.Windows.Forms.TextBox inpDescricao;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private Controles.DataGridViewFacil dataGridViewFacil1;
     }
 }

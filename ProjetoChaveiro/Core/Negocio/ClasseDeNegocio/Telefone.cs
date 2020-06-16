@@ -12,5 +12,9 @@ namespace Core.Negocio.ClasseDeNegocio
         public EnumeradorTelefone Tipo { get; set; }
         public string DDD { get; set; }
         public string Numero { get; set; }
+        public string ToString()
+        {
+            return $"{DDD}{Numero}";
+        }
     }
 }

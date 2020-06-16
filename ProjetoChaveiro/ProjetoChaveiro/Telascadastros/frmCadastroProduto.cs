@@ -2,8 +2,9 @@
 using System;
 using System.Windows.Forms;
 using Core;
-
-
+using Core.Processo;
+using Core.Negocio.Enumerador;
+using Core.Negocio.Enumeradores;
 
 namespace ProjetoChaveiro.Telascadastros
 {
@@ -13,14 +14,13 @@ namespace ProjetoChaveiro.Telascadastros
         private string Produto;
         private int Preco;
 
-        public TextBox Unidade { get; private set; }
-
         public frmCadastroDeProduto()
         {
             InitializeComponent();
             lblNomeFuncao.Text = "Cadastro de Produtos";
-            InpCodigoProduto.Text = new Core.Processo.ProcessoDeProduto().ObtenhaCodigo().ToString();
+            InpCodigoProduto.Text = new ProcessoDeProduto().ObtenhaProximoCodigo().ToString();
             InpCodigoProduto.Enabled = false;
+            
         }
 
         private Produto CrieProduto()
@@ -29,28 +29,28 @@ namespace ProjetoChaveiro.Telascadastros
             {
                 Codigo = InpCodigoProduto.Text.ConvertaParaInt(),
                 Descricao = InpProduto.Text,
-                Valor = InpPreco.Text.ConvertaParaDecimal(),
-                Unidade = InpUnidade.Text
+                Valor = inpPreco.Text.ConvertaParaDecimal(),
+                Unidade = ctlUnidadeProduto1.ObtenhaUnidadeSelecionada(),
+                Ativo = chkAtivo.Checked
             };
         }
+
 
         public bool PodeSalvarProduto()
         {
             if (InpProduto.Text == "")
             {
+                MessageBox.Show("Descrição de produto vazio.", "Inconsistencia.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
-            var valor = InpPreco.Text.ConvertaParaDecimal();
+            var valor = inpPreco.Text.ConvertaParaDecimal();
             if (valor < 0)
             {
+                MessageBox.Show("Valor de produto negativo.", "Inconsistencia.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
-            if (InpUnidade.Text == "")
-            {
-                return false;
-            }
 
             return true;
         }
@@ -67,14 +67,19 @@ namespace ProjetoChaveiro.Telascadastros
             var Produto = CrieProduto();
             try
             {
-                new Core.Processo.ProcessoDeProduto().SalveNoBanco(Produto);
+                new ProcessoDeProduto().SalveNoBanco(Produto);
                 MessageBox.Show("Produto Salvo com sucesso.", "Sucesso.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
             }
             catch (Exception erro)
             {
-                var publicadorDeExceccoes = new PublicadorDeException(erro);
+                 new PublicadorDeException(erro);
             }
+        }
+
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

@@ -8,6 +8,8 @@ namespace Core.Negocio.ClasseDeNegocio
 {
     class ItemOrdemDeServico : IObjeto
     {
+        public int Codigo { get; set; }
+
         public string String()
         {
             return "Ordem de serviço";
