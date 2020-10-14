@@ -14,14 +14,53 @@ namespace Core.Negocio.Mapeadores
         public void Salve(Produto produto)
         {
             using (var conexao = new Conexao())
-            using (var trns = conexao.CrieTransaceo())
+            using (var trns = conexao.Transacao())
+            {
+                if (!Atualize(produto, conexao))
+                     Crie(produto, conexao);
+                trns.Commit();
+            }
+        }
+
+        private bool Atualize(Produto produto, Conexao conexao)
+        {
+            using (var comando = conexao.CrieComando())
+            {
+                var sql =
+                    $@"UPDATE TBPRODUTO SET
+PRODUTO = '{produto.Descricao}',
+PRECO = {produto.Valor.ToString().Replace(",", ".")},
+UNIDADE = '{produto.Unidade.Codigo}' ,
+ATIVO = '{(produto.Ativo ? 'S' : 'N')}'
+WHERE CODIGO = {produto.Codigo}
+";
+                comando.CommandText = sql;
+                return comando.ExecuteNonQuery() != 0;
+            }
+        }
+
+        private static void Crie(Produto produto, Conexao conexao)
+        {
+            using (var comando = conexao.CrieComando())
+            {
+                var sql =
+                    $@"INSERT INTO TBPRODUTO (CODIGO,PRODUTO,PRECO,UNIDADE,ATIVO)
+VALUES ({produto.Codigo},'{produto.Descricao}',{produto.Valor.ToString().Replace(",", ".")},
+'{produto.Unidade.Codigo}','{(produto.Ativo ? 'S' : 'N')}')";
+                comando.CommandText = sql;
+                comando.ExecuteNonQuery();
+            }
+        }
+
+        internal void Exclua(Produto produtoSelecionado)
+        {
+            using (var conexao = new Conexao())
+            using (var trns = conexao.Transacao())
             {
                 using (var comando = conexao.CrieComando())
                 {
                     var sql =
-                        $@"INSERT INTO TBPRODUTO (CODIGO,PRODUTO,PRECO,UNIDADE,ATIVO)
-VALUES ({produto.Codigo},'{produto.Descricao}',{produto.Valor.ToString().Replace(",",".")},
-'{produto.Unidade.Codigo}','{(produto.Ativo ? 'S' : 'N')}')";
+                        $@"DELETE FROM TBPRODUTO  WHERE CODIGO = {produtoSelecionado.Codigo}";
                     comando.CommandText = sql;
                     comando.ExecuteNonQuery();
                 }
@@ -46,7 +85,7 @@ VALUES ({produto.Codigo},'{produto.Descricao}',{produto.Valor.ToString().Replace
                     return produtos;
                 }
             }
-        }
+        } //rodrigo.wallauer
 
         private Produto MapeieProduto(FbDataReader dr)
         {

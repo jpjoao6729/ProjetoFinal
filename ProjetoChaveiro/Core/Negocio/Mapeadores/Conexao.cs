@@ -53,7 +53,7 @@ namespace Core
             }
         }
 
-        public FbTransaction CrieTransaceo()
+        public FbTransaction Transacao()
         {
             if(_transacao == null)
             {

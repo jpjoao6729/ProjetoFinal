@@ -31,7 +31,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.mkpCpf = new System.Windows.Forms.MaskedTextBox();
-            this.InpFuncao = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,6 +42,7 @@
             this.ctlTelefone1 = new ProjetoChaveiro.Controles.ctlTelefone();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.ctlFuncao1 = new ProjetoChaveiro.Controles.ctlFuncao();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.SuspendLayout();
@@ -55,14 +55,14 @@
             this.groupBox3.Controls.Add(this.ctlTelefone1);
             this.groupBox3.Location = new System.Drawing.Point(9, 89);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(622, 400);
+            this.groupBox3.Size = new System.Drawing.Size(622, 357);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.ctlFuncao1);
             this.groupBox4.Controls.Add(this.mkpCpf);
-            this.groupBox4.Controls.Add(this.InpFuncao);
             this.groupBox4.Controls.Add(this.label5);
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Controls.Add(this.label3);
@@ -71,7 +71,7 @@
             this.groupBox4.Controls.Add(this.label2);
             this.groupBox4.Location = new System.Drawing.Point(7, 13);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(604, 123);
+            this.groupBox4.Size = new System.Drawing.Size(604, 111);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             // 
@@ -82,13 +82,6 @@
             this.mkpCpf.Name = "mkpCpf";
             this.mkpCpf.Size = new System.Drawing.Size(170, 20);
             this.mkpCpf.TabIndex = 8;
-            // 
-            // InpFuncao
-            // 
-            this.InpFuncao.Location = new System.Drawing.Point(353, 75);
-            this.InpFuncao.Name = "InpFuncao";
-            this.InpFuncao.Size = new System.Drawing.Size(219, 20);
-            this.InpFuncao.TabIndex = 7;
             // 
             // label5
             // 
@@ -133,6 +126,7 @@
             this.InpCodigoOperador.Name = "InpCodigoOperador";
             this.InpCodigoOperador.Size = new System.Drawing.Size(100, 20);
             this.InpCodigoOperador.TabIndex = 1;
+            this.InpCodigoOperador.Text = "0";
             // 
             // label2
             // 
@@ -146,28 +140,28 @@
             // 
             // ctlEndereco1
             // 
-            this.ctlEndereco1.Location = new System.Drawing.Point(7, 134);
+            this.ctlEndereco1.Location = new System.Drawing.Point(7, 126);
             this.ctlEndereco1.Name = "ctlEndereco1";
             this.ctlEndereco1.Size = new System.Drawing.Size(604, 145);
             this.ctlEndereco1.TabIndex = 2;
             // 
             // ctlEmail1
             // 
-            this.ctlEmail1.Location = new System.Drawing.Point(8, 278);
+            this.ctlEmail1.Location = new System.Drawing.Point(8, 270);
             this.ctlEmail1.Name = "ctlEmail1";
             this.ctlEmail1.Size = new System.Drawing.Size(325, 77);
             this.ctlEmail1.TabIndex = 1;
             // 
             // ctlTelefone1
             // 
-            this.ctlTelefone1.Location = new System.Drawing.Point(346, 277);
+            this.ctlTelefone1.Location = new System.Drawing.Point(346, 269);
             this.ctlTelefone1.Name = "ctlTelefone1";
             this.ctlTelefone1.Size = new System.Drawing.Size(265, 77);
             this.ctlTelefone1.TabIndex = 0;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(648, 416);
+            this.button1.Location = new System.Drawing.Point(651, 392);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 7;
@@ -177,12 +171,19 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(648, 445);
+            this.button2.Location = new System.Drawing.Point(651, 421);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 8;
             this.button2.Text = "Sair";
             this.button2.UseVisualStyleBackColor = true;
+            // 
+            // ctlFuncao1
+            // 
+            this.ctlFuncao1.Location = new System.Drawing.Point(354, 74);
+            this.ctlFuncao1.Name = "ctlFuncao1";
+            this.ctlFuncao1.Size = new System.Drawing.Size(208, 23);
+            this.ctlFuncao1.TabIndex = 9;
             // 
             // frmCadastroOperador
             // 
@@ -218,11 +219,11 @@
         private Controles.ctlEndereco ctlEndereco1;
         private Controles.ctlEmail ctlEmail1;
         private Controles.ctlTelefone ctlTelefone1;
-        private System.Windows.Forms.TextBox InpFuncao;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.MaskedTextBox mkpCpf;
+        private Controles.ctlFuncao ctlFuncao1;
     }
 }

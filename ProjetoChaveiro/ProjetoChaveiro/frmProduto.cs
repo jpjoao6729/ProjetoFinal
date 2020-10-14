@@ -19,5 +19,18 @@ namespace ProjetoChaveiro
         {
             ctlPesquisaProduto1.btnSair.Click += (object sender, EventArgs e) => { Close(); };
         }
+
+        private void ctlPesquisaProduto1_Load(object sender, EventArgs e)
+        {
+            //var produtoSelecionado = ((ProdutoMV)bindingSource1.Current)?.Operador;
+            //if (operadorSelecionado != null)
+            //{
+            //    var form = new frmCadastroOperador(operadorSelecionado);
+            //    form.FormClosed += new FormClosedEventHandler((object s, FormClosedEventArgs evt) => {
+            //        CarregueGDV();
+            //    });
+            //    form.Show();
+            //}
+        }
     }
 }

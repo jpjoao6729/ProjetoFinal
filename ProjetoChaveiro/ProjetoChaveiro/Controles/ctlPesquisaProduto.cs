@@ -17,14 +17,14 @@ namespace ProjetoChaveiro.Controles
     {
         private class ProdutoMV
         {
-            private Produto _produto;
+            public Produto Produto;
             public ProdutoMV(Produto produto)
             {
-                _produto = produto;
+                Produto = produto;
             }
-            public int Codigo => _produto.Codigo;
-            public string Descricao => _produto.Descricao;
-            public decimal ValorProduto => _produto.Valor;
+            public int Codigo => Produto.Codigo;
+            public string Descricao => Produto.Descricao;
+            public string ValorProduto => Produto.Valor.ToString("0.00");
         }
 
         private BindingSource _bs;
@@ -72,8 +72,15 @@ namespace ProjetoChaveiro.Controles
 
         private void AbraFormularioEditar()
         {
-            var form = new frmCadastroDeProduto();
-            form.Show();
+            var produtoSelecionado = ((ProdutoMV)_bs.Current)?.Produto;
+            if (produtoSelecionado != null)
+            {
+                var form = new frmCadastroDeProduto(produtoSelecionado);
+                form.FormClosed += new FormClosedEventHandler((object s, FormClosedEventArgs evt) => {
+                    CarregueDadosProdutos();
+                });
+                form.Show();
+            }
         }
 
         private void AbraFormularioNovo()
@@ -85,12 +92,35 @@ namespace ProjetoChaveiro.Controles
 
         private void ExcluaProduto()
         {
-            //Apagar no banco
+            var produtoSelecionado = ((ProdutoMV)_bs.Current)?.Produto;
+            if (produtoSelecionado != null)
+            {
+                try
+                {
+                    if (MessageBox.Show("Deseja Excluir o produto selecionado?", "Sucesso.", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                    {
+                        new ProcessoDeProduto().Exclua(produtoSelecionado);
+                    }
+                }
+                catch (Exception erro)
+                {
+                    new PublicadorDeException(erro);
+                }
+                finally
+                {
+                    CarregueDadosProdutos();
+                }
+            }
         }
 
         private void inpDescricao_TextChanged(object sender, EventArgs e)
         {
             CarregueDadosProdutos();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

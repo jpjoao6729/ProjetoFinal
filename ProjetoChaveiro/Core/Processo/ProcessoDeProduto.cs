@@ -23,6 +23,11 @@ namespace Core.Processo
         {
             return new MapeadorDeProduto().ObtenhaPorDescricao(text);
         }
+
+        public void Exclua(Produto produtoSelecionado)
+        {
+            new MapeadorDeProduto().Exclua(produtoSelecionado);
+        }
     }
 
 }

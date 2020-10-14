@@ -49,6 +49,7 @@
             this.inpDescricao.Name = "inpDescricao";
             this.inpDescricao.Size = new System.Drawing.Size(436, 20);
             this.inpDescricao.TabIndex = 23;
+            this.inpDescricao.TextChanged += new System.EventHandler(this.inpDescricao_TextChanged);
             // 
             // button3
             // 
@@ -58,6 +59,7 @@
             this.button3.TabIndex = 22;
             this.button3.Text = "Editar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.editar);
             // 
             // btnNovo
             // 
@@ -76,6 +78,7 @@
             this.btnSair.TabIndex = 20;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnExcluir
             // 
@@ -85,6 +88,7 @@
             this.btnExcluir.TabIndex = 19;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // ctlPesquisaDeServico
             // 

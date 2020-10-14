@@ -31,5 +31,10 @@ namespace ProjetoChaveiro.Controles
             };
 
         }
+
+        internal void CarregueEmail(Email email)
+        {
+            inpEmail.Text = email.Texto;
+        }
     }
 }

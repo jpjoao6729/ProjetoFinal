@@ -15,12 +15,19 @@ namespace ProjetoChaveiro
         public frmServicos()
         {
             InitializeComponent();
+            base.lblNomeFuncao.Text = "Servicos";
+            lblNomeTela.Text = nameof(frmServicos);
             CarregueEventos();
-            lblNomeFuncao.Text = "Serviços";
+
         }
         private void CarregueEventos()
         {
-            pesquisaDeServico1.btnSair.Click += (object sender, EventArgs e) => { Close(); };
+            ctlPesquisaDeServico1.btnSair.Click += (object sender, EventArgs e) => { Close(); };
+       }
+
+        private void pesquisaDeServico1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

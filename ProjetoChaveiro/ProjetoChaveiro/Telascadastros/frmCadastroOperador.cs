@@ -1,4 +1,5 @@
-﻿using Core.Negocio.ClasseDeNegocio;
+﻿
+using Core.Negocio.ClasseDeNegocio;
 using System;
 using System.Windows.Forms;
 using Core;
@@ -8,6 +9,7 @@ namespace ProjetoChaveiro.Telascadastros
 {
     public partial class frmCadastroOperador : frmBase
     {
+        private Operador operadorSelecionado;
 
         public frmCadastroOperador()
         {
@@ -15,9 +17,28 @@ namespace ProjetoChaveiro.Telascadastros
             lblNomeFuncao.Text = "Cadastro de Operadores";
             InpCodigoOperador.Text = new ProcessoDeOperador().ObtenhaProximoCodigo().ToString();
             InpCodigoOperador.Enabled = false;
-
-
         }
+
+        public frmCadastroOperador(Operador operadorSelecionado)
+        {
+            InitializeComponent();
+            lblNomeFuncao.Text = "Cadastro de Operadores";
+            InpCodigoOperador.Text = new ProcessoDeOperador().ObtenhaProximoCodigo().ToString();
+            InpCodigoOperador.Enabled = false;
+            CarregueOperador(operadorSelecionado);
+        }
+
+        private void CarregueOperador(Operador operadorSelecionado)
+        {
+            InpCodigoOperador.Text = operadorSelecionado.Codigo.ToString();
+            InpNome.Text = operadorSelecionado.Nome;
+            mkpCpf.Text = operadorSelecionado.CPF;
+            ctlEndereco1.CarregueEndereco(operadorSelecionado.Endereco);
+            ctlEmail1.CarregueEmail(operadorSelecionado.Email);
+            ctlTelefone1.CarregueTelefone(operadorSelecionado.Telefone);
+            ctlFuncao1.SelecioneFuncao(operadorSelecionado.Funcao);
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (!PodeSalvarOperador()) return;
@@ -44,7 +65,8 @@ namespace ProjetoChaveiro.Telascadastros
                 CPF = mkpCpf.Text,
                 Endereco = ctlEndereco1.ObtenhaEndereco(),
                 Email = ctlEmail1.ObtenhaEmail(),
-                Telefone = ctlTelefone1.ObtenhaTelefone()
+                Telefone = ctlTelefone1.ObtenhaTelefone(),
+                Funcao = ctlFuncao1.ObtenhaFuncaoSelecionada()
             };
         }
 
@@ -65,6 +87,12 @@ namespace ProjetoChaveiro.Telascadastros
             if (!ctlEmail1.EhValido())
             {
                 MessageBox.Show("E-mail inválido.", "Inconsistencia.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if(ctlFuncao1.ObtenhaFuncaoSelecionada() == null)
+            {
+                MessageBox.Show("Funcao não Selecionada.", "Inconsistencia.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 

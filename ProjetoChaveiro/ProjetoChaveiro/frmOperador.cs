@@ -1,4 +1,6 @@
-﻿using ProjetoChaveiro.Telascadastros;
+﻿using Core.Negocio.ClasseDeNegocio;
+using Core.Processo;
+using ProjetoChaveiro.Telascadastros;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,50 +15,125 @@ namespace ProjetoChaveiro
 {
     public partial class frmOperador : frmBase
     {
-        private DataGridView dataGridView1;
-        private TextBox textBox1;
+        private class OperadorMV {
+            public Operador Operador;
+            public OperadorMV(Operador operador)
+            {
+                Operador = operador;
+            }
+            public int Codigo => Operador.Codigo;
+            public string Nome => Operador.Nome;
+            public string Funcao => Operador.Funcao.Descricao;
+
+        }
+
+        private TextBox inpDescricao;
         private Button btnSair;
         private Button btnNovo;
         private Button btnEditar;
+        private Controles.DataGridViewFacil dataGridViewFacil1;
+        private BindingSource bindingSource1;
+        private IContainer components;
         private Button btnExcluir;
+
 
         public frmOperador()
         {
             InitializeComponent();
             base.lblNomeFuncao.Text = "Cadastro de Operadores";
             lblNomeTela.Text = nameof(frmOperador);
+            AjusteGridView();
+            textBox1_TextChanged(null,null);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void AjusteGridView()
         {
-
+            dataGridViewFacil1.CarregueBindSource(bindingSource1);
+            dataGridViewFacil1.CrieCabecalho("Codigo", nameof(OperadorMV.Codigo), 40);
+            dataGridViewFacil1.CrieCabecalhoPreenchido("Nome", nameof(OperadorMV.Nome));
+            dataGridViewFacil1.CrieCabecalho("Funcão", nameof(OperadorMV.Funcao), 100);
+            dataGridViewFacil1.DesabiliteHeader();
+            dataGridViewFacil1.AtiveSelecaoPreechida();
         }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            var form = new frmCadastroOperador();
+            form.Show();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            var operadorSelecionado = ((OperadorMV)bindingSource1.Current)?.Operador;
+            if (operadorSelecionado != null)
+            {
+                var form = new frmCadastroOperador(operadorSelecionado);
+                form.FormClosed += new FormClosedEventHandler((object s, FormClosedEventArgs evt) => {
+                    CarregueGDV();
+                });
+                form.Show();
+            }
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (bindingSource1.Current is OperadorMV operador)
+            {
+                try
+                {
+                    new ProcessoDeOperador().Apague(operador.Operador);
+                    MessageBox.Show("Operador removido com sucesso", "Sucesso");
+                    CarregueGDV();
+                }
+                catch (Exception erro)
+                {
+                    new PublicadorDeException(erro);
+                }
+            }
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            CarregueGDV();
+        }
+
+        private void CarregueGDV()
+        {
+            var operadores = new ProcessoDeOperador().ObtenhaPorDescricao(inpDescricao.Text);
+            bindingSource1.DataSource = operadores.Select(x => new OperadorMV(x));
+        }
+
+
+
+
+
+
 
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.components = new System.ComponentModel.Container();
+            this.inpDescricao = new System.Windows.Forms.TextBox();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataGridViewFacil1 = new ProjetoChaveiro.Controles.DataGridViewFacil();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // inpDescricao
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 116);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(439, 178);
-            this.dataGridView1.TabIndex = 6;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(7, 91);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(439, 20);
-            this.textBox1.TabIndex = 7;
+            this.inpDescricao.Location = new System.Drawing.Point(7, 91);
+            this.inpDescricao.Name = "inpDescricao";
+            this.inpDescricao.Size = new System.Drawing.Size(439, 20);
+            this.inpDescricao.TabIndex = 7;
+            this.inpDescricao.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // btnSair
             // 
@@ -98,51 +175,36 @@ namespace ProjetoChaveiro
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
+            // dataGridViewFacil1
+            // 
+            this.dataGridViewFacil1.Location = new System.Drawing.Point(7, 117);
+            this.dataGridViewFacil1.Name = "dataGridViewFacil1";
+            this.dataGridViewFacil1.Size = new System.Drawing.Size(439, 175);
+            this.dataGridViewFacil1.TabIndex = 12;
+            // 
             // frmOperador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(582, 322);
+            this.Controls.Add(this.dataGridViewFacil1);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.btnSair);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.inpDescricao);
             this.MaximumSize = new System.Drawing.Size(598, 361);
             this.MinimumSize = new System.Drawing.Size(598, 361);
             this.Name = "frmOperador";
-            this.Controls.SetChildIndex(this.dataGridView1, 0);
-            this.Controls.SetChildIndex(this.textBox1, 0);
+            this.Controls.SetChildIndex(this.inpDescricao, 0);
             this.Controls.SetChildIndex(this.btnSair, 0);
             this.Controls.SetChildIndex(this.btnNovo, 0);
             this.Controls.SetChildIndex(this.btnEditar, 0);
             this.Controls.SetChildIndex(this.btnExcluir, 0);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Controls.SetChildIndex(this.dataGridViewFacil1, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
-        }
-
-        private void btnSalvar_Click(object sender, EventArgs e)
-        {
-            var form = new frmCadastroOperador();
-            form.Show();
-        }
-
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            var form = new frmCadastroOperador();
-            form.Show();
-        }
-
-        private void btnExcluir_Click(object sender, EventArgs e)
-        {
-            //Chamar metodo de excluir no banco
-        }
-
-        private void btnSair_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }

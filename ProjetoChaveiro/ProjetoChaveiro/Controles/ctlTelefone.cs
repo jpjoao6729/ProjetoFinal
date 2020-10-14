@@ -53,5 +53,13 @@ namespace ProjetoChaveiro.Controles
             };
 
         }
+
+        internal void CarregueTelefone(Telefone telefone)
+        {
+            inpDDD.Text = telefone.DDD;
+            inpNumero.Text = telefone.Numero;
+            rbCelular.Checked = telefone.Tipo == EnumeradorTelefone.Celular;
+            rbFixo.Checked = telefone.Tipo == EnumeradorTelefone.Fixo;
+        }
     }
 }

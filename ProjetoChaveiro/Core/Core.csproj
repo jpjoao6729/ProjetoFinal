@@ -48,7 +48,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Negocio\ClasseDeNegocio\Funcao.cs" />
+    <Compile Include="Negocio\ClasseDeNegocio\SessaoDoUsuario.cs" />
     <Compile Include="Negocio\Enumerador\EnumeradorUnidadeProduto.cs" />
+    <Compile Include="Negocio\Exception\EnderecoNaoEncontradoException.cs" />
     <Compile Include="Negocio\Mapeadores\Conexao.cs" />
     <Compile Include="Negocio\Mapeadores\MapeadorDeCliente.cs" />
     <Compile Include="MetodosDeExtensao.cs" />
@@ -76,11 +79,16 @@
     <Compile Include="Negocio\Enumerador\EnumeradorUF.cs" />
     <Compile Include="Negocio\Exception\FormularioNaoEncontradoException.cs" />
     <Compile Include="Negocio\Exception\InconsistenciaException.cs" />
+    <Compile Include="Negocio\Mapeadores\MapeadorDeFornecedor.cs" />
+    <Compile Include="Negocio\Mapeadores\MapeadorDeFuncao.cs" />
     <Compile Include="Negocio\Mapeadores\MapeadorDeProduto.cs" />
+    <Compile Include="Negocio\Mapeadores\MapeadorOperador.cs" />
+    <Compile Include="Negocio\Mapeadores\MapeadorServico.cs" />
     <Compile Include="Negocio\Tradutor\TradutorEndereco.cs" />
     <Compile Include="Processo\ProcessoDeCliente.cs" />
     <Compile Include="Processo\ProcessoDeEndereco.cs" />
     <Compile Include="Processo\ProcessoDeFornecedor.cs" />
+    <Compile Include="Processo\ProcessoDeFuncao.cs" />
     <Compile Include="Processo\ProcessoDeOperador.cs" />
     <Compile Include="Processo\ProcessoDeProduto.cs" />
     <Compile Include="Processo\ProcessoDeServico.cs" />

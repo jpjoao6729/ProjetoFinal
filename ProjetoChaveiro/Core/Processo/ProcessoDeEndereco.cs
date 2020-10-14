@@ -1,4 +1,5 @@
 ﻿using Core.Negocio.ClasseDeNegocio;
+using Core.Negocio.Exception;
 using Core.Negocio.Tradutor;
 using System;
 using System.Collections.Generic;
@@ -15,13 +16,21 @@ namespace Core.Processo
         private static string _tipoResposta = "json";
         public Endereco Pesquise(string cep)
         {
-            var endPoint = $@"{_endPoint}/{cep}/{_tipoResposta}";
+            try
+            {
+                var endPoint = $@"{_endPoint}/{cep}/{_tipoResposta}";
 
-            var wc = new WebClient();
-            var resposta = wc.DownloadString(endPoint);
+                var wc = new WebClient();
+                var resposta = wc.DownloadString(endPoint);
 
-            var endereco = (Newtonsoft.Json.JsonConvert.DeserializeObject<TradutorEndereco>(resposta)).Converta();
-            return endereco;
+                var endereco = (Newtonsoft.Json.JsonConvert.DeserializeObject<TradutorEndereco>(resposta)).Converta();
+                return endereco;
+            }
+            catch(Exception ex)
+            {
+                throw new EnderecoNaoEncontradoException();
+            }
+
         }
     }
 }

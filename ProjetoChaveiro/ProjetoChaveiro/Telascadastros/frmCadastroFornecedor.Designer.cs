@@ -35,13 +35,13 @@
             this.InpRazaoSocial = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.mkpCnpjFornecedor = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.ctlEmail1 = new ProjetoChaveiro.Controles.ctlEmail();
             this.ctlEndereco1 = new ProjetoChaveiro.Controles.ctlEndereco();
             this.ctlTelefone1 = new ProjetoChaveiro.Controles.ctlTelefone();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.mkpCnpjFornecedor = new System.Windows.Forms.MaskedTextBox();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +57,7 @@
             // 
             // InpCodigoFornecedor
             // 
+            this.InpCodigoFornecedor.Enabled = false;
             this.InpCodigoFornecedor.Location = new System.Drawing.Point(117, 15);
             this.InpCodigoFornecedor.Name = "InpCodigoFornecedor";
             this.InpCodigoFornecedor.Size = new System.Drawing.Size(100, 20);
@@ -112,6 +113,14 @@
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             // 
+            // mkpCnpjFornecedor
+            // 
+            this.mkpCnpjFornecedor.Location = new System.Drawing.Point(117, 88);
+            this.mkpCnpjFornecedor.Mask = "00.000.000/000-00";
+            this.mkpCnpjFornecedor.Name = "mkpCnpjFornecedor";
+            this.mkpCnpjFornecedor.Size = new System.Drawing.Size(168, 20);
+            this.mkpCnpjFornecedor.TabIndex = 11;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -142,6 +151,7 @@
             this.ctlTelefone1.Name = "ctlTelefone1";
             this.ctlTelefone1.Size = new System.Drawing.Size(265, 70);
             this.ctlTelefone1.TabIndex = 9;
+            this.ctlTelefone1.Load += new System.EventHandler(this.ctlTelefone1_Load);
             // 
             // btnCancelar
             // 
@@ -162,14 +172,6 @@
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
-            // 
-            // mkpCnpjFornecedor
-            // 
-            this.mkpCnpjFornecedor.Location = new System.Drawing.Point(117, 88);
-            this.mkpCnpjFornecedor.Mask = "00.000.000/000-00";
-            this.mkpCnpjFornecedor.Name = "mkpCnpjFornecedor";
-            this.mkpCnpjFornecedor.Size = new System.Drawing.Size(168, 20);
-            this.mkpCnpjFornecedor.TabIndex = 11;
             // 
             // frmCadastroFornecedor
             // 

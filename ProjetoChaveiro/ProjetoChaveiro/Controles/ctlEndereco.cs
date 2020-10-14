@@ -49,7 +49,25 @@ namespace ProjetoChaveiro.Controles
 
         private void button1_Click(object sender, EventArgs e)
         {
-           var endereco = new ProcessoDeEndereco().Pesquise(mkCEP.Text);
+            try
+            {
+                var endereco = new ProcessoDeEndereco().Pesquise(mkCEP.Text);
+                mkCEP.Text = endereco.CEP;
+                inpCidade.Text = endereco.Cidade;
+                inpLogradouro.Text = endereco.Logradouro;
+                inpBairro.Text = endereco.Bairro;
+                inpComplemento.Text = endereco.Complemento;
+                ctlUF1.SelecioneUF(endereco.UF);
+            }
+            catch(Exception er)
+            {
+                new PublicadorDeException(er);
+            }
+
+        }
+
+        internal void CarregueEndereco(Endereco endereco)
+        {
             mkCEP.Text = endereco.CEP;
             inpCidade.Text = endereco.Cidade;
             inpLogradouro.Text = endereco.Logradouro;

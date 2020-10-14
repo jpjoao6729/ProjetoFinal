@@ -72,6 +72,12 @@
     <Compile Include="Controles\ctlEndereco.Designer.cs">
       <DependentUpon>ctlEndereco.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controles\ctlFuncao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ctlFuncao.Designer.cs">
+      <DependentUpon>ctlFuncao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controles\ctlPesquisaProduto.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -202,6 +208,12 @@
     <Compile Include="frmServicos.Designer.cs">
       <DependentUpon>frmServicos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="OrdemDeServico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,6 +233,12 @@
     </Compile>
     <Compile Include="Telascadastros\frmCadastroFornecedor.Designer.cs">
       <DependentUpon>frmCadastroFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telascadastros\frmCadastroFuncao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telascadastros\frmCadastroFuncao.Designer.cs">
+      <DependentUpon>frmCadastroFuncao.cs</DependentUpon>
     </Compile>
     <Compile Include="Telascadastros\frmCadastroOperador.cs">
       <SubType>Form</SubType>
@@ -258,6 +276,12 @@
     <Compile Include="Telascadastros\frmEntradaEstoque.Designer.cs">
       <DependentUpon>frmEntradaEstoque.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmFuncoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFuncoes.Designer.cs">
+      <DependentUpon>frmFuncoes.cs</DependentUpon>
+    </Compile>
     <Compile Include="TelasComplementares\frmSelecaoProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -278,6 +302,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\ctlEndereco.resx">
       <DependentUpon>ctlEndereco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ctlFuncao.resx">
+      <DependentUpon>ctlFuncao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\ctlPesquisaDeServico.resx">
       <DependentUpon>ctlPesquisaDeServico.cs</DependentUpon>
@@ -315,6 +342,9 @@
     <EmbeddedResource Include="frmFornecedor.resx">
       <DependentUpon>frmFornecedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmFuncoes.resx">
+      <DependentUpon>frmFuncoes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMovimentacoesEstoque.resx">
       <DependentUpon>frmMovimentacoesEstoque.cs</DependentUpon>
     </EmbeddedResource>
@@ -332,6 +362,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmServicos.resx">
       <DependentUpon>frmServicos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OrdemDeServico.resx">
       <DependentUpon>OrdemDeServico.cs</DependentUpon>
@@ -351,6 +384,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Telascadastros\frmCadastroFornecedor.resx">
       <DependentUpon>frmCadastroFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telascadastros\frmCadastroFuncao.resx">
+      <DependentUpon>frmCadastroFuncao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telascadastros\frmCadastroOperador.resx">
       <DependentUpon>frmCadastroOperador.cs</DependentUpon>

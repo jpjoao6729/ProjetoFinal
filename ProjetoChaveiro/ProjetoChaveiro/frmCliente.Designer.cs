@@ -162,7 +162,6 @@
             this.MinimumSize = new System.Drawing.Size(570, 374);
             this.Name = "frmCliente";
             this.Text = "frmCadastroCliente";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmCliente_FormClosing);
             this.Load += new System.EventHandler(this.frmCliente_Load);
             this.Enter += new System.EventHandler(this.frmCliente_Enter);
             this.Controls.SetChildIndex(this.btnEditar, 0);

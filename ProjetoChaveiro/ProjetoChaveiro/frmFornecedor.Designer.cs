@@ -28,13 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnNovo = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.inpDescricao = new System.Windows.Forms.TextBox();
+            this.dataGridViewFacil1 = new ProjetoChaveiro.Controles.DataGridViewFacil();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnNovo
@@ -77,28 +79,27 @@
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // dataGridView1
+            // inpDescricao
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 121);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(433, 162);
-            this.dataGridView1.TabIndex = 10;
+            this.inpDescricao.Location = new System.Drawing.Point(13, 95);
+            this.inpDescricao.Name = "inpDescricao";
+            this.inpDescricao.Size = new System.Drawing.Size(433, 20);
+            this.inpDescricao.TabIndex = 11;
             // 
-            // textBox1
+            // dataGridViewFacil1
             // 
-            this.textBox1.Location = new System.Drawing.Point(13, 95);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(433, 20);
-            this.textBox1.TabIndex = 11;
+            this.dataGridViewFacil1.Location = new System.Drawing.Point(13, 122);
+            this.dataGridViewFacil1.Name = "dataGridViewFacil1";
+            this.dataGridViewFacil1.Size = new System.Drawing.Size(433, 156);
+            this.dataGridViewFacil1.TabIndex = 12;
             // 
             // frmFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(569, 311);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewFacil1);
+            this.Controls.Add(this.inpDescricao);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnSair);
@@ -111,9 +112,9 @@
             this.Controls.SetChildIndex(this.btnSair, 0);
             this.Controls.SetChildIndex(this.btnExcluir, 0);
             this.Controls.SetChildIndex(this.btnEditar, 0);
-            this.Controls.SetChildIndex(this.dataGridView1, 0);
-            this.Controls.SetChildIndex(this.textBox1, 0);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Controls.SetChildIndex(this.inpDescricao, 0);
+            this.Controls.SetChildIndex(this.dataGridViewFacil1, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -125,7 +126,8 @@
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox inpDescricao;
+        private Controles.DataGridViewFacil dataGridViewFacil1;
+        private System.Windows.Forms.BindingSource bindingSource1;
     }
 }

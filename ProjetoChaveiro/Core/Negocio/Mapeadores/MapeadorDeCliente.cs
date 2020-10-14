@@ -14,49 +14,149 @@ namespace Core.Mapeadores
         internal void SalveNoBanco(ClienteAbstrato cliente)
         {
             using (var conexao = new Conexao())
-            using (var trns = conexao.CrieTransaceo())
+            using (var trns = conexao.Transacao())
             {
-                using (var comando = conexao.CrieComando())
-                {
-                    var sql = @"INSERT INTO TBCLIENTE (CODIGO, FISICO, JURIDICO ,CEP ,CIDADE,UF,LAGRADOURO,COMPLEMENTO,BAIRRO,TELEFONEFIXO,TELEFONECELULAR, EMAIL)
+                if (!Update(cliente, conexao))
+                Insira(cliente, conexao);
+                trns.Commit();
+            }
+        }
+
+        private bool Update(ClienteAbstrato cliente, Conexao conexao)
+        {
+            using (var comando = conexao.CrieComando())
+            {
+                if(!AtualizaCliente(cliente, comando)) return false;
+            }
+            using(var comando = conexao.CrieComando())
+            {
+                    ApagueDetalhesClienteFisico(cliente.Codigo, comando);
+                    ApagueDetalhesClienteJuridico(cliente.Codigo, comando);
+            }
+            using (var comando = conexao.CrieComando())
+            {
+                CriaDadosPessoaFisicaJuridica(cliente, comando);
+            }
+            return true;
+        }
+
+        private static bool AtualizaCliente(ClienteAbstrato cliente, FbCommand comando)
+        {
+            var sql = $@"UPDATE TBCLIENTE SET
+FISICO = {(cliente is PessoaFisica ? "1" : "null")}, 
+JURIDICO = {(cliente is PessoaJuridica ? "1" : "null")},
+CEP = '{cliente.Endereco.CEP.Replace("-", "")}',
+CIDADE = '{cliente.Endereco.Cidade}',
+UF = '{cliente.Endereco.UF}',
+LAGRADOURO = '{cliente.Endereco.Logradouro}',
+COMPLEMENTO = '{cliente.Endereco.Complemento}',
+BAIRRO = '{cliente.Endereco.Bairro}',
+TELEFONEFIXO = {(cliente.Telefone.Tipo.Equals(EnumeradorTelefone.Fixo) ? $"'{cliente.Telefone.ToString()}'" : "null")},
+TELEFONECELULAR = {(cliente.Telefone.Tipo.Equals(EnumeradorTelefone.Celular) ? $"'{cliente.Telefone.ToString()}'" : "null")}, 
+EMAIL = '{cliente.Email.ToString()}'
+WHERE CODIGO = {cliente.Codigo}";
+            comando.CommandText = sql;
+
+            return comando.ExecuteNonQuery() != 0;
+        }
+
+        private void Insira(ClienteAbstrato cliente, Conexao conexao)
+        {
+            using (var comando = conexao.CrieComando())
+            {
+                var sql = @"INSERT INTO TBCLIENTE (CODIGO, FISICO, JURIDICO ,CEP ,CIDADE,UF,LAGRADOURO,COMPLEMENTO,BAIRRO,TELEFONEFIXO,TELEFONECELULAR, EMAIL)
 VALUES ";
-                    if (cliente is PessoaFisica)
-                    {
-                        sql += CrieComandoPessoaFisica(cliente);
-                    }
-                    else
-                    {
-                        sql += CrieComandoPessoaJuridica(cliente);
-                    }
-
-                    comando.CommandText = sql;
-                    comando.ExecuteNonQuery();
-
+                if (cliente is PessoaFisica)
+                {
+                    sql += CrieComandoPessoaFisica(cliente);
                 }
+                else
+                {
+                    sql += CrieComandoPessoaJuridica(cliente);
+                }
+
+                comando.CommandText = sql;
+                comando.ExecuteNonQuery();
+
+            }
+            using (var comando = conexao.CrieComando())
+            {
+                CriaDadosPessoaFisicaJuridica(cliente, comando);
+            }
+        }
+
+        private static void CriaDadosPessoaFisicaJuridica(ClienteAbstrato cliente, FbCommand comando)
+        {
+            if (cliente is PessoaFisica pessoafisicas)
+            {
+                comando.CommandText = $@"INSERT INTO TBCLIENTEFISICO (CODIGOCLIENTE, NOME, CPF) VALUES 
+({pessoafisicas.Codigo}, '{pessoafisicas.Nome}', '{pessoafisicas.CPF}')";
+
+            }
+            else if (cliente is PessoaJuridica pessoaJuridica)
+            {
+                comando.CommandText = $@"INSERT INTO TBCLIENTEJURIDICO (CODIGOCLIENTE, RAZAOSOCIAL, NOME, CNPJ) VALUES
+({pessoaJuridica.Codigo},'{pessoaJuridica.RazaoSocial}','{pessoaJuridica.Nome}','{pessoaJuridica.CNPJ}')";
+            }
+            comando.ExecuteNonQuery();
+        }
+
+        internal void ApagueCliente(ClienteAbstrato cliente)
+        {
+            using (var conexao = new Conexao())
+            using (var trns = conexao.Transacao())
+            {
                 using (var comando = conexao.CrieComando())
                 {
                     if (cliente is PessoaFisica pessoafisicas)
                     {
-                        comando.CommandText = $@"INSERT INTO TBCLIENTEFISICO (CODIGOCLIENTE, NOME, CPF) VALUES 
-({pessoafisicas.Codigo}, '{pessoafisicas.Nome}', '{pessoafisicas.CPF}')";
-
+                        ApagueDetalhesClienteFisico(pessoafisicas.Codigo, comando);
                     }
                     else if (cliente is PessoaJuridica pessoaJuridica)
                     {
-                        comando.CommandText = $@"INSERT INTO TBCLIENTEJURIDICO (CODIGOCLIENTE, RAZAOSOCIAL, NOME, CNPJ) VALUES
-({pessoaJuridica.Codigo},{pessoaJuridica.RazaoSocial},{pessoaJuridica.Nome},{pessoaJuridica.CNPJ})";
+                        ApagueDetalhesClienteJuridico(pessoaJuridica.Codigo, comando);
                     }
-                    comando.ExecuteNonQuery();
+                }
+                using (var comando = conexao.CrieComando())
+                {
+                    ApagueDadosGerais(cliente, comando);
                 }
                 trns.Commit();
             }
+        }
+
+        private void ApagueDadosGerais(ClienteAbstrato cliente, FbCommand comando)
+        {
+            comando.CommandText = $"DELETE FROM TBCLIENTE WHERE CODIGO = {cliente.Codigo}";
+            comando.ExecuteNonQuery();
+        }
+
+        private void ApagueDetalhesClienteJuridico(int codigo, FbCommand comando)
+        {
+            comando.CommandText = $"DELETE FROM TBCLIENTEJURIDICO WHERE CODIGOCLIENTE = {codigo}";
+            comando.ExecuteNonQuery();
+        }
+
+        private void ApagueDetalhesClienteFisico(int codigo, FbCommand comando)
+        {
+            comando.CommandText = $"DELETE FROM TBCLIENTEFISICO WHERE CODIGOCLIENTE = {codigo}";
+            comando.ExecuteNonQuery();
         }
 
         internal IEnumerable<ClienteAbstrato> ObtenhaPorDescricao(string descricao)
         {
             using (var conexao = new Conexao())
             {
-                conexao.AdicioneComando($@"SELECT * FROM TBCLIENTE TBC
+                conexao.AdicioneComando($@"SELECT 
+ TBC.*, 
+ TBCF.CODIGOCLIENTE AS CODIGOCLIENTEFISICO,
+ TBCF.CPF,
+ TBCF.NOME AS NOMECLIENTEFISICO,
+ TBCJ.CODIGOCLIENTE AS CODIGOCLIENTEJURIDICO,
+ TBCJ.CNPJ,
+ TBCJ.NOME AS NOMECLIENTEJURIDICO,
+ TBCJ.RAZAOSOCIAL
+FROM TBCLIENTE TBC
  LEFT JOIN TBCLIENTEFISICO TBCF  on TBCF.CODIGOCLIENTE = TBC.CODIGO
  LEFT JOIN TBCLIENTEJURIDICO TBCJ ON TBCJ.CODIGOCLIENTE = TBC.CODIGO
  WHERE TBCF.NOME LIKE '%{descricao}%' OR TBCJ.NOME LIKE '%{descricao}%'");
@@ -86,11 +186,11 @@ VALUES ";
         {
             return new PessoaJuridica()
             {
-                Codigo = dr["CODIGO"].ToString().ConvertaParaInt(),
+                Codigo = dr["CODIGOCLIENTEJURIDICO"].ToString().ConvertaParaInt(),
                 CNPJ = dr["CNPJ"].ToString(),
                 Email = MapeieEmail(dr),
                 Endereco = MapeieEndereco(dr),
-                Nome = dr["NOME"].ToString(),
+                Nome = dr["NOMECLIENTEJURIDICO"].ToString(),
                 RazaoSocial = dr["RAZAOSOCIAL"].ToString(),
                 Telefone = MapeieTelefone(dr)
             };
@@ -101,16 +201,16 @@ VALUES ";
         {
             Telefone telefone;
             var numero = "";
-            if(dr["TELEFONEFIXO"].ToString() != "")
+            if (dr["TELEFONEFIXO"].ToString() != "")
             {
                 telefone = new Telefone()
-                { Tipo = EnumeradorTelefone.Fixo};
+                { Tipo = EnumeradorTelefone.Fixo };
                 numero = dr["TELEFONEFIXO"].ToString();
             }
             else
             {
                 telefone = new Telefone()
-                    { Tipo = EnumeradorTelefone.Celular };
+                { Tipo = EnumeradorTelefone.Celular };
                 numero = dr["TELEFONECELULAR"].ToString();
             }
 
@@ -122,11 +222,11 @@ VALUES ";
         private Endereco MapeieEndereco(FbDataReader dr)
         {
             return new Endereco()
-            { 
+            {
                 CEP = dr["CEP"].ToString(),
-                Cidade = dr["CIDADE"].ToString(), 
-                UF = EnumeradorUF.Obtenha< EnumeradorUF>(dr["UF"].ToString()),   
-                Logradouro =  dr["LAGRADOURO"].ToString(),  
+                Cidade = dr["CIDADE"].ToString(),
+                UF = EnumeradorUF.Obtenha<EnumeradorUF>(dr["UF"].ToString()),
+                Logradouro = dr["LAGRADOURO"].ToString(),
                 Complemento = dr["COMPLEMENTO"].ToString(),
                 Bairro = dr["BAIRRO"].ToString()
 
@@ -137,7 +237,7 @@ VALUES ";
         private Email MapeieEmail(FbDataReader dr)
         {
             return new Email()
-            { 
+            {
                 Texto = dr["EMAIL"].ToString()
             };
         }
@@ -146,11 +246,11 @@ VALUES ";
         {
             return new PessoaFisica()
             {
-                Codigo = dr["CODIGO"].ToString().ConvertaParaInt(),
+                Codigo = dr["CODIGOCLIENTEFISICO"].ToString().ConvertaParaInt(),
                 CPF = dr["CPF"].ToString(),
                 Email = MapeieEmail(dr),
                 Endereco = MapeieEndereco(dr),
-                Nome = dr["NOME"].ToString(),
+                Nome = dr["NOMECLIENTEFISICO"].ToString(),
                 Telefone = MapeieTelefone(dr)
             };
         }

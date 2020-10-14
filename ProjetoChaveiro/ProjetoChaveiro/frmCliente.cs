@@ -4,6 +4,7 @@ using Core.Processo;
 using ProjetoChaveiro.Telascadastros;
 using System;
 using System.Linq;
+using System.Windows.Forms;
 
 namespace ProjetoChaveiro
 {
@@ -25,6 +26,7 @@ namespace ProjetoChaveiro
 
         private void AjusteDVG()
         {
+            dataGridViewFacil1.AtiveSelecaoPreechida();
             dataGridViewFacil1.CarregueBindSource(bindingSource1);
             dataGridViewFacil1.CrieCabecalho("Codigo", nameof(ClienteMV.Codigo), 40);
             dataGridViewFacil1.CrieCabecalhoPreenchido("Nome", nameof(ClienteMV.Nome));
@@ -33,21 +35,42 @@ namespace ProjetoChaveiro
             dataGridViewFacil1.DesabiliteHeader();
         }
 
-        private void btnNovo_Click(object sender, System.EventArgs e)
+        private void btnNovo_Click(object sender, EventArgs e)
         {
             var form = new frmCadastroCliente();
+            form.FormClosed += new FormClosedEventHandler((object s, FormClosedEventArgs evt) => {
+                CarregueDGV();
+            });
             form.Show();
         }
 
-        private void btnEditar_Click(object sender, System.EventArgs e)
+        private void btnEditar_Click(object sender, EventArgs e)
         {
-            var form = new frmCadastroCliente();
-            form.Show();
+            var clienteSelecionado = ((ClienteMV)bindingSource1.Current)?.Cliente;
+            if(clienteSelecionado != null)
+            {
+                var form = new frmCadastroCliente(clienteSelecionado);
+                form.FormClosed += new FormClosedEventHandler((object s, FormClosedEventArgs evt) => {
+                    CarregueDGV();
+                });
+                form.Show();
+            }
         }
 
-        private void btnExcluir_Click(object sender, System.EventArgs e)
+        private void btnExcluir_Click(object sender, EventArgs e)
         {
-            //Chamar metodo de excluir no banco
+            if(bindingSource1.Current is ClienteMV cliente)
+            {
+                try
+                {
+                    new ProcessoDeCliente().Apague(cliente.Cliente);
+                    CarregueDGV();
+                }
+                catch(Exception erro)
+                {
+                    new PublicadorDeException(erro);
+                }
+            }
         }
 
         private void btnSair_Click(object sender, System.EventArgs e)
@@ -85,11 +108,6 @@ namespace ProjetoChaveiro
                     return "";
                 }
             }
-        }
-
-        private void frmCliente_FormClosing(object sender, System.Windows.Forms.FormClosingEventArgs e)
-        {
-
         }
     }
 }

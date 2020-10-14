@@ -15,30 +15,15 @@ namespace ProjetoChaveiro.Telascadastros
             inpCodigo.Text = new ProcessoDeServico().ObtenhaCodigo().ToString();
         }
 
-        private void btnSalvar_Click(object sender, EventArgs e)
-        {
-            if (!PodeProsseguir()) return;
-            var servico = CrieServico();
-            try
-            {
-                new ProcessoDeServico().SalveNoBanco(servico);
-            }
-            catch(Exception ex)
-            {
-                var publicadorDeExceccoes = new PublicadorDeException(ex);
-            }
-        }
-
         private Servico CrieServico()
         {
             return new Servico()
             { 
                 Codigo = inpCodigo.Text.ConvertaParaInt(),
                 Descricao = inpDescricao.Text,
-                Valor = inpPreco.Text.ConvertaParaDecimal()
+                Preco = inpPreco.Text.ConvertaParaDecimal()
 
             };
-
         }
 
         private bool PodeProsseguir()
@@ -48,7 +33,7 @@ namespace ProjetoChaveiro.Telascadastros
                 MessageBox.Show("Campo descrição vazio.", "Inconsistencia.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if(inpPreco.Text.ConvertaParaInt() > 0)
+            if(inpPreco.Text.ConvertaParaDecimal() < 0)
             {
                 MessageBox.Show("Valor do serviço negativo.", "Inconsistencia.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
@@ -59,6 +44,23 @@ namespace ProjetoChaveiro.Telascadastros
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnSalvar_Click_1(object sender, EventArgs e)
+        {
+            if (!PodeProsseguir()) return;
+            var servico = CrieServico();
+            try
+            {
+                new ProcessoDeServico().SalveNoBanco(servico);
+                MessageBox.Show("Serviço Salvo com sucesso.", "Sucesso.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Close();
+
+            }
+            catch (Exception ex)
+            {
+                var publicadorDeExceccoes = new PublicadorDeException(ex);
+            }
         }
     }
 }

@@ -24,5 +24,10 @@ namespace Core.Processo
         {
             return new MapeadorDeCliente().ObtenhaPorDescricao(texto);
         }
+        
+        public void Apague(ClienteAbstrato cliente)
+        {
+            new MapeadorDeCliente().ApagueCliente(cliente);
+        }
     }
 }

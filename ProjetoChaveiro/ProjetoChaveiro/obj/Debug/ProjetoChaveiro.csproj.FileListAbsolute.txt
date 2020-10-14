@@ -123,3 +123,7 @@ C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoCh
 C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\bin\Debug\Newtonsoft.Json.dll
 C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\bin\Debug\Newtonsoft.Json.xml
 C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.Controles.ctlUnidadeProduto.resources
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.Controles.ctlFuncao.resources
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.frmFuncoes.resources
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.Telascadastros.frmCadastroFuncao.resources
+C:\Users\JOÃO PAULO\Desktop\ProjetoFinal\ProjetoFinal\ProjetoChaveiro\ProjetoChaveiro\obj\Debug\ProjetoChaveiro.lblLogin.resources

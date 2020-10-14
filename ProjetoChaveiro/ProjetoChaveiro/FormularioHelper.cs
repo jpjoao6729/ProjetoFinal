@@ -1,5 +1,6 @@
 ﻿using Core.Negocio.Exception;
 using System;
+using System.IO;
 
 namespace ProjetoChaveiro
 {
@@ -13,7 +14,7 @@ namespace ProjetoChaveiro
                 var formulario = (frmBase)instancia.Unwrap();
                 return formulario;
             }
-            catch(Exception erro)
+            catch (FileNotFoundException erro)
             {
                 throw new FormularioNaoEncontradoException();
             }

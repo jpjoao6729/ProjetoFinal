@@ -31,5 +31,10 @@ namespace ProjetoChaveiro.Controles
             var itemSelecionado = comboBox1.SelectedItem as EnumeradorUnidadeProduto;
             return itemSelecionado;
         }
+
+        public void Selecione(EnumeradorUnidadeProduto unidade)
+        {
+            comboBox1.SelectedItem = unidade;
+        }
     }
 }

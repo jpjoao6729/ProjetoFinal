@@ -28,27 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pesquisaDeServico1 = new ProjetoChaveiro.Controles.ctlPesquisaDeServico();
+            this.ctlPesquisaDeServico1 = new ProjetoChaveiro.Controles.ctlPesquisaDeServico();
             this.SuspendLayout();
             // 
             // pesquisaDeServico1
             // 
-            this.pesquisaDeServico1.Location = new System.Drawing.Point(6, 92);
-            this.pesquisaDeServico1.Name = "pesquisaDeServico1";
-            this.pesquisaDeServico1.Size = new System.Drawing.Size(570, 214);
-            this.pesquisaDeServico1.TabIndex = 6;
+            this.ctlPesquisaDeServico1.Location = new System.Drawing.Point(6, 92);
+            this.ctlPesquisaDeServico1.Name = "pesquisaDeServico1";
+            this.ctlPesquisaDeServico1.Size = new System.Drawing.Size(570, 214);
+            this.ctlPesquisaDeServico1.TabIndex = 6;
+            this.ctlPesquisaDeServico1.Load += new System.EventHandler(this.pesquisaDeServico1_Load);
             // 
             // frmServicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(588, 309);
-            this.Controls.Add(this.pesquisaDeServico1);
+            this.Controls.Add(this.ctlPesquisaDeServico1);
             this.MaximumSize = new System.Drawing.Size(604, 348);
             this.MinimumSize = new System.Drawing.Size(604, 348);
             this.Name = "frmServicos";
             this.Text = "frmServicos";
-            this.Controls.SetChildIndex(this.pesquisaDeServico1, 0);
+            this.Controls.SetChildIndex(this.ctlPesquisaDeServico1, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -56,6 +57,6 @@
 
         #endregion
 
-        private Controles.ctlPesquisaDeServico pesquisaDeServico1;
+        private Controles.ctlPesquisaDeServico ctlPesquisaDeServico1;
     }
 }

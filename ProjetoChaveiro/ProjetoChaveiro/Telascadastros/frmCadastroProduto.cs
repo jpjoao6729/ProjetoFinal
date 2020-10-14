@@ -20,7 +20,22 @@ namespace ProjetoChaveiro.Telascadastros
             lblNomeFuncao.Text = "Cadastro de Produtos";
             InpCodigoProduto.Text = new ProcessoDeProduto().ObtenhaProximoCodigo().ToString();
             InpCodigoProduto.Enabled = false;
-            
+        }
+        //public 
+        public frmCadastroDeProduto(Produto produtoSelecionado)
+        {
+            InitializeComponent();
+            lblNomeFuncao.Text = "Cadastro de Produtos";
+            CarregueprodutoParaEdicao(produtoSelecionado);
+        }
+
+        private void CarregueprodutoParaEdicao(Produto produto)
+        {
+            InpCodigoProduto.Text = produto.Codigo.ToString();
+            InpProduto.Text = produto.Descricao;
+            inpPreco.Text = produto.Valor.ToString("##.###,##");
+            ctlUnidadeProduto1.Selecione(produto.Unidade);
+            chkAtivo.Checked = produto.Ativo;
         }
 
         private Produto CrieProduto()

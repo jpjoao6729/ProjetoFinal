@@ -49,5 +49,9 @@ namespace ProjetoChaveiro.Controles
         {
             dgv.CellDoubleClick += eventoDeSelecao;
         }
+        public void AtiveSelecaoPreechida()
+        {
+            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        }
     }
 }

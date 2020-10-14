@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProjetoChaveiro.Telascadastros;
+using Core.Processo;
 
 namespace ProjetoChaveiro.Controles
 {
@@ -15,13 +16,14 @@ namespace ProjetoChaveiro.Controles
     {
         private class ServicoMV
         {
-            public ServicoMV()
+            public Servico Servico { get; set; }
+            public ServicoMV(Servico servico)
             {
-
+                Servico = servico;
             }
-            public int Codigo { get; set; }
-            public string Descricao { get; set; }
-            public decimal ValorProduto { get; set; }
+            public int Codigo => Servico.Codigo;
+            public string Descricao => Servico.Descricao;
+            public string ValorProduto => Servico.Preco.ToString("0.00");
         }
         private BindingSource _bs;
         public ctlPesquisaDeServico()
@@ -29,32 +31,27 @@ namespace ProjetoChaveiro.Controles
             InitializeComponent();
 
             CarregueDGV();
-            MetodoComplementar();
+            CarregueServicos();
             CarregueEventos();
         }
 
         private void CarregueDGV()
         {
+            _bs = new BindingSource();
+            dgvProdutos.CarregueBindSource(_bs);
             dgvProdutos.CrieCabecalho("Codigo", nameof(ServicoMV.Codigo), 50);
-            dgvProdutos.CrieCabecalho("Descrição", nameof(ServicoMV.Codigo), 150);
-            dgvProdutos.CrieCabecalho("Valor", nameof(ServicoMV.Codigo), 232);
+            dgvProdutos.CrieCabecalho("Descrição", nameof(ServicoMV.Descricao), 150);
+            dgvProdutos.CrieCabecalho("Valor", nameof(ServicoMV.ValorProduto), 232);
             dgvProdutos.DesabiliteHeader();
         }
         public void AdicioneBaingSource(BindingSource bs)
         {
             _bs = bs;
         }
-        private void MetodoComplementar()
+        private void CarregueServicos()
         {
-            //dgvProdutos.ReadOnly = true;
-            var item = new ServicoMV()
-            {
-                Codigo = 1,
-                Descricao = "Chave grande",
-                ValorProduto = 10
-            };
-
-            //dgvProdutos.DataSource = new List<ProdutoMV>() { item };
+            var servicos = new ProcessoDeServico().ObtenhaPorDescricao(inpDescricao.Text);
+            _bs.DataSource = servicos.Select(x => new ServicoMV(x));
         }
         public void AdicioneEvento(DataGridViewCellEventHandler eventoDeSelecao)
         {
@@ -76,12 +73,54 @@ namespace ProjetoChaveiro.Controles
         private void AbraFormularioNovo()
         {
             var form = new frmCadastroServico();
+            form.FormClosing += (object obj, FormClosingEventArgs evt) => { CarregueServicos(); };
             form.Show();
         }
 
         private void ExcluaProduto()
         {
-            //Apagar no banco
+            var servicoSelecionado = ((ServicoMV)_bs.Current)?.Servico;
+            if (servicoSelecionado != null)
+            {
+                try
+                {
+                    if (MessageBox.Show("Deseja Excluir o serviço selecionado?", "Sucesso.", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                    {
+                        new ProcessoDeServico().Exclua(servicoSelecionado);
+                    }
+                }
+
+                catch (Exception erro)
+                {
+                    new PublicadorDeException(erro);
+                }
+                finally
+                {
+                    CarregueServicos();
+                }
+            }
+        }
+
+
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inpDescricao_TextChanged(object sender, EventArgs e)
+        {
+            CarregueServicos();
+        }
+
+        private void editar(object sender, EventArgs e)
+        {
+            CarregueServicos();
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

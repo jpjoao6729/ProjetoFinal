@@ -32,15 +32,13 @@
             this.ctlPesquisaProduto1 = new ProjetoChaveiro.Controles.ctlPesquisaProduto();
             this.SuspendLayout();
             // 
-            // lblNomeFuncao
-            // 
-            // 
             // ctlPesquisaProduto1
             // 
             this.ctlPesquisaProduto1.Location = new System.Drawing.Point(3, 91);
             this.ctlPesquisaProduto1.Name = "ctlPesquisaProduto1";
             this.ctlPesquisaProduto1.Size = new System.Drawing.Size(567, 186);
             this.ctlPesquisaProduto1.TabIndex = 6;
+            this.ctlPesquisaProduto1.Load += new System.EventHandler(this.ctlPesquisaProduto1_Load);
             // 
             // frmProduto
             // 

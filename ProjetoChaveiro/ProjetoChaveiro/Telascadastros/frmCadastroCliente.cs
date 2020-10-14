@@ -14,7 +14,40 @@ namespace ProjetoChaveiro.Telascadastros
             lblNomeFuncao.Text = "Cadastro de Clientes";
             inpCodigo.Text = new ProcessoDeCliente().ObtenhaProximoCodigo().ToString();
             inpRazaoSocial.Enabled = false;
-            
+        }
+
+        public frmCadastroCliente(ClienteAbstrato cliente)
+        {
+            InitializeComponent();
+            lblNomeFuncao.Text = "Edição de Clientes";
+            CarregueDadosCliente(cliente);
+        }
+
+        private void CarregueDadosCliente(ClienteAbstrato cliente)
+        {
+            if(cliente is PessoaFisica fisica)
+            {
+                rbFisico.Checked = true;
+                rbJuridico.Checked = false;
+                lblCpfCnpj.Text = "CPF";
+                mkCpfCnpj.Mask = "000-000-000.00";
+                mkCpfCnpj.Text = fisica.CPF;
+                inpRazaoSocial.Enabled = false;
+            }
+            else if(cliente is PessoaJuridica juridica)
+            {
+                rbFisico.Checked = false;
+                rbJuridico.Checked = true;
+                lblCpfCnpj.Text = "CNPJ";
+                mkCpfCnpj.Text = juridica.CNPJ;
+                mkCpfCnpj.Mask = "00.000.000/0000-00";
+                inpRazaoSocial.Text = juridica.RazaoSocial;
+            }
+            inpCodigo.Text = cliente.Codigo.ToString();
+            inpNome.Text = cliente.Nome;
+            ctlEndereco1.CarregueEndereco(cliente.Endereco);
+            ctlTelefone1.CarregueTelefone(cliente.Telefone);
+            ctlEmail1.CarregueEmail(cliente.Email);
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)

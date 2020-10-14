@@ -2,6 +2,7 @@
 using System;
 using System.Windows.Forms;
 using Core;
+using Core.Processo;
 
 namespace ProjetoChaveiro.Telascadastros
 {
@@ -13,6 +14,25 @@ namespace ProjetoChaveiro.Telascadastros
             lblNomeFuncao.Text = "Cadastro Fornecedor";
             InpCodigoFornecedor.Text = new ProcessoDeFornecedor().ObtenhaProximoCodigo().ToString();
             InpCodigoFornecedor.Enabled = false;
+        }
+
+        public frmCadastroFornecedor(Fornecedor fornecedor)
+        {
+            InitializeComponent();
+            lblNomeFuncao.Text = "Editar Fornecedor";
+            CarregueDadosFornecedor(fornecedor);
+        }
+
+        private void CarregueDadosFornecedor(Fornecedor fornecedor)
+        {
+            InpCodigoFornecedor.Text = fornecedor.Codigo.ToString();
+            InpRazaoSocial.Text = fornecedor.RazaoSocial;
+            inpNomeFantasia.Text = fornecedor.Nome;
+            mkpCnpjFornecedor.Text = fornecedor.CNPJ;
+            ctlEndereco1.CarregueEndereco(fornecedor.Endereco);
+            ctlTelefone1.CarregueTelefone(fornecedor.Telefone);
+            ctlEmail1.CarregueEmail(fornecedor.Email);
+
         }
 
         private void btnSalvar_Click(object sender, System.EventArgs e)
@@ -94,6 +114,11 @@ namespace ProjetoChaveiro.Telascadastros
         private void btnCancelar_Click(object sender, System.EventArgs e)
         {
             Close();
+        }
+
+        private void ctlTelefone1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
